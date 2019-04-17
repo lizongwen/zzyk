@@ -9,12 +9,15 @@ function resolve(dir) {
 const CompressionWebpackPlugin = require('compression-webpack-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 // 导入postcss-px-to-viewport
-const pxtovw=require('postcss-px-to-viewport')
+const pxtovw = require('postcss-px-to-viewport')
 // 定义压缩文件类型
 const productionGzipExtensions = ['js', 'css']
 
 module.exports = {
-	publicPath: './', //基本路径
+	//基本路径
+	publicPath: process.env.NODE_ENV === 'production'
+		? '/zzyk/'
+		: '/',
 	outputDir: 'zzyk',
 	productionSourceMap: false,
 	assetsDir: 'static',
@@ -102,14 +105,14 @@ module.exports = {
 			// postcss: {
 			// 	plugins: [
 			// 		pxtovw({
-            //             viewportWidth: 375, 
-            //             viewportHeight: 667,  
-            //             unitPrecision: 3, 
-            //             viewportUnit: 'vw', 
-            //             selectorBlackList: ['.ignore', '.hairlines'], 
-            //             minPixelValue: 1, 
-            //             mediaQuery: false 
-            //         })
+			//             viewportWidth: 375, 
+			//             viewportHeight: 667,  
+			//             unitPrecision: 3, 
+			//             viewportUnit: 'vw', 
+			//             selectorBlackList: ['.ignore', '.hairlines'], 
+			//             minPixelValue: 1, 
+			//             mediaQuery: false 
+			//         })
 			// 	]
 			// }
 		}, // 为所有的 CSS 及其预处理文件开启 CSS Modules。
@@ -124,8 +127,8 @@ module.exports = {
 		port: 3002,
 		open: true,
 		proxy: {
-			'/cas':{
-				target:'https://uc.ewoho.com'
+			'/cas': {
+				target: 'https://uc.ewoho.com'
 			}
 		}
 	},
