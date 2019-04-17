@@ -2,7 +2,7 @@
   <div class="navbar">
     <div class="navbar-content">
       <div class="site-logo">
-        <img src="../img/logo.png" alt="logo">
+        <img src="../img/logo.jpg" alt="logo">
       </div>
       <div class="site-wish">全国首家资质运营服务平台</div>
       <ul class="site-nav">

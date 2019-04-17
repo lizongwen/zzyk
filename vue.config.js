@@ -15,7 +15,7 @@ const productionGzipExtensions = ['js', 'css']
 
 module.exports = {
 	publicPath: './', //基本路径
-	outputDir: 'dist',
+	outputDir: 'zzyk',
 	productionSourceMap: false,
 	assetsDir: 'static',
 	filenameHashing: true,

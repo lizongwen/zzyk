@@ -4,10 +4,10 @@ import BasicLayout from '@/components/BasicLayout'
 import Home from './views/Home.vue';
 
 Vue.use(Router)
-
+// console.log(1,process.env.BASE_URL)
 export default new Router({
 	mode: 'history',
-	base: process.env.BASE_URL,
+	base:'zzyk',
 	routes: [
 		{
 			path: '/',
