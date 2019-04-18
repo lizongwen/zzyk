@@ -442,9 +442,7 @@
       </div>
     </div>
     <div class="footer-line">
-      
-        <ad-banner :adshow="adshow" :positionType="positionType"></ad-banner>
-      
+      <ad-banner :adshow="adshow" :positionType="positionType"></ad-banner>
     </div>
     <site-footer></site-footer>
   </div>
@@ -472,11 +470,11 @@ export default {
   },
   mounted() {
     window.onload = () => {
+      window.scrollTo(0, 0);
       this.PageContentHeight = this.$refs.home.clientHeight;
       this.htmlHeight = document.body.clientHeight;
       handleScrollHeader(resp => {
-        console.log(resp.currentTop);
-        if (resp.currentTop > 1000) {
+        if (resp.currentTop > 300) {
           this.adshow = true;
         } else {
           this.adshow = false;

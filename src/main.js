@@ -8,7 +8,6 @@ import router from './router'
 import store from './store'
 import { http, utils } from '@/utils'
 import '@/style/base.scss'
-
 Vue.use(Antd)
 Vue.config.productionTip = false
 Vue.prototype.$http = http;

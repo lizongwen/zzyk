@@ -27,7 +27,7 @@ export default {
   }
 };
 </script>
-<style>
+<style lang="scss">
 .v-enter-active,
 .v-leave-active {
   transition: opacity 0.5s;
