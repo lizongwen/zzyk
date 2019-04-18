@@ -7,7 +7,7 @@
       </div>
       <div class="search-input-wrap">
         <input class="search-input" type="text" placeholder="请输入您的要求">
-        <button class="search-btn">搜一下</button>
+        <button type="button" class="search-btn">搜一下</button>
         <div class="hot-word">
           <dl>
             <dt>本周热搜：</dt>
@@ -92,8 +92,10 @@ export default {
       display: inline-block;
       border: none;
       font-size: 24px;
+	  border-top-left-radius: 0;
       border-top-right-radius: 4px;
       border-bottom-right-radius: 4px;
+	  border-bottom-left-radius: 0;
       background-color: #128bed;
       color: #fff;
       cursor: pointer;
