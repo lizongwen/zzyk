@@ -2,8 +2,18 @@
   <div class="home-search">
     <div>
       <div class="search-category clearfix">
-        <a class="search-category__item search-category__item--active" href="javascript:;">资质</a>
-        <a class="search-category__item" href="javascript:;">技术负责人</a>
+        <a
+          class="search-category__item"
+          href="javascript:;"
+          @click="selectSearch(1)"
+          :class="{'search-category__item--active':current==1}"
+        >资质</a>
+        <a
+          class="search-category__item"
+          href="javascript:;"
+          @click="selectSearch(2)"
+          :class="{'search-category__item--active':current==2}"
+        >技术负责人</a>
       </div>
       <div class="search-input-wrap">
         <input class="search-input" type="text" placeholder="请输入您的要求">
@@ -28,7 +38,14 @@
 <script>
 export default {
   data() {
-    return {};
+    return {
+      current: 1
+    };
+  },
+  methods: {
+    selectSearch(val) {
+      this.current = val;
+    }
   }
 };
 </script>
@@ -92,10 +109,10 @@ export default {
       display: inline-block;
       border: none;
       font-size: 24px;
-	  border-top-left-radius: 0;
+      border-top-left-radius: 0;
       border-top-right-radius: 4px;
       border-bottom-right-radius: 4px;
-	  border-bottom-left-radius: 0;
+      border-bottom-left-radius: 0;
       background-color: #128bed;
       color: #fff;
       cursor: pointer;

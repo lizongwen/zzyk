@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="home" ref="home">
     <site-top></site-top>
     <navbar></navbar>
     <div class="banner-wrap" ref="bannerWrap">
@@ -438,9 +438,14 @@
             </div>
           </div>
         </div>
+        <button class="operator-view-more-btn" type="button">查看更多运营商</button>
       </div>
     </div>
-    <div class="footer-line"></div>
+    <div class="footer-line">
+      
+        <ad-banner :adshow="adshow" :positionType="positionType"></ad-banner>
+      
+    </div>
     <site-footer></site-footer>
   </div>
 </template>
@@ -451,6 +456,9 @@ import Navbar from "@/components/Navbar";
 import HomeSearch from "@/components/HomeSearch";
 import HomeConTitle from "@/components/HomeConTitle";
 import SiteFooter from "@/components/SiteFooter";
+AdBanner;
+import AdBanner from "@/components/AdBanner";
+import { handleScrollHeader } from "@/utils/util";
 
 export default {
   name: "home",
@@ -459,11 +467,45 @@ export default {
     Navbar,
     HomeSearch,
     HomeConTitle,
-    SiteFooter
+    SiteFooter,
+    AdBanner
   },
-  mounted() {},
+  mounted() {
+    window.onload = () => {
+      this.PageContentHeight = this.$refs.home.clientHeight;
+      this.htmlHeight = document.body.clientHeight;
+      handleScrollHeader(resp => {
+        console.log(resp.currentTop);
+        if (resp.currentTop > 1000) {
+          this.adshow = true;
+        } else {
+          this.adshow = false;
+        }
+        if (resp.currentTop > this.finalPx) {
+          this.positionType = "absolute";
+        }
+        if (resp.currentTop < this.finalPx) {
+          this.positionType = "fixed";
+        }
+      });
+      window.addEventListener(
+        "resize",
+        event => {
+          clearTimeout(timer);
+          let timer = setTimeout(() => {
+            this.htmlHeight = document.body.clientHeight;
+          }, 10);
+        },
+        false
+      );
+    };
+  },
   data() {
     return {
+      positionType: "fixed",
+      htmlHeight: 0,
+      PageContentHeight: 0,
+      adshow: false,
       bannerMmarkH: null,
       serveInfo: {
         zzqg: 1,
@@ -474,6 +516,9 @@ export default {
     };
   },
   computed: {
+    finalPx() {
+      return this.PageContentHeight - this.htmlHeight - 345;
+    },
     formatZzqg() {
       return parseInt(this.serveInfo.zzqg).toLocaleString();
     },
@@ -494,6 +539,8 @@ export default {
   }
 };
 </script>
+
+
 <style lang="scss" scoped>
 $serveListItemW: 150;
 $operatorItem: 285;
@@ -807,12 +854,21 @@ $operatorItem: 285;
           color: #128bed;
         }
       }
+      .operator-view-more-btn {
+        display: block;
+        width: 200px;
+        height: 42px;
+        margin: 37px auto 0;
+        border: 1px solid #999;
+        border-radius: 8px;
+        color: #999;
+      }
     }
   }
   .footer-line {
     position: absolute;
-	width: 100%;
-	height: 1px;
+    width: 100%;
+    height: 1px;
   }
 }
 </style>
