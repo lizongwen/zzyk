@@ -61,7 +61,11 @@ export default {
       margin: 0 25px;
       display: inline-block;
       color: #e2e2f1;
+      padding-left: 37px;
+      background: url("../img/home_sprites.png") no-repeat;
+      background-position: 0 -27px;
       &:not(:first-child) {
+        background-position: -0 -81px;
         &::before {
           content: "";
           top: 5px;
@@ -75,6 +79,12 @@ export default {
     }
     .search-category__item--active {
       color: #fff;
+      &:first-child {
+        background-position: 0 0;
+      }
+      &:last-child {
+        background-position: -0 -54px;
+      }
       &::after {
         content: "";
         position: absolute;

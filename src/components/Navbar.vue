@@ -47,7 +47,9 @@ export default {};
 }
 .site-wish {
   float: left;
-  margin: 37px 0 0 29px;
+  margin: 34px 0 0 29px;
+  font-family:STKaiti;
+  font-size:16px;
 }
 .site-nav {
   float: right;
