@@ -534,7 +534,7 @@ export default {
   methods: {
     imgload() {
       this.bannerMmarkH = this.$refs.bannerWrap.offsetHeight + "px";
-    }
+	}
   }
 };
 </script>

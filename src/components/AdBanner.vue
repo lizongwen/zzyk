@@ -1,6 +1,6 @@
 <template>
   <transition>
-    <div class="ad-banner" v-show="adshow" :style="{position:positionType}">
+    <div class="ad-banner" v-show="adshow" :style="{position:positionType}" v-if="isShow">
       <div class="ad-banner-inner">
         <img class="ad-img" src="../img/ad-img.png" alt="推广图">
         <img class="ad-img1" src="../img/ad-img1.png" alt="广告语图">
@@ -15,11 +15,14 @@
 export default {
   props: ["adshow", "positionType"],
   data() {
-    return {};
+    return {
+		isShow:true
+	};
   },
   methods: {
     closeAdbanner() {
-      this.isShow = false;
+		this.isShow=false;
+    //   this.$emit('closeAdbanner');
     },
     goPage(name) {
       alert("立即咨询");
