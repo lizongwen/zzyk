@@ -492,6 +492,7 @@ export default {
           clearTimeout(timer);
           let timer = setTimeout(() => {
             this.htmlHeight = document.body.clientHeight;
+			this.imgload();
           }, 10);
         },
         false

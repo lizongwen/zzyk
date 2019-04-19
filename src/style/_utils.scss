@@ -61,7 +61,10 @@
 /* 浮动 */
 .pull-left,.fl 	{ float: left !important;}
 .pull-right,.fr {float: right !important;}
-
+/* 清浮动 */
+.clearfix:before,
+.clearfix:after {content: " ";display: table;}
+.clearfix:after {clear: both;}
 /* 对齐的方式 Align */
 .align-baseline { vertical-align: baseline !important;} 
 .align-top {vertical-align: top !important;}

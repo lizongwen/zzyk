@@ -7,5 +7,11 @@ module.exports = {
 				'useBuiltIns': 'entry'
 			}
 		]
-	]
+	],
+	plugins: [
+		[
+		  "import",
+		  {libraryName: "ant-design-vue",libraryDirectory: "es",style: true}
+		]
+	  ]
 }
