@@ -1,10 +1,8 @@
 <template>
-  <div class="home" ref="home">
-    <site-top></site-top>
-    <navbar></navbar>
+  <div class="home">
     <div class="banner-wrap" ref="bannerWrap">
-      <img class="banner" src="../img/banner.jpg" alt="banner" @load="imgload">
-      <div class="banner-mark" :style="{height:bannerMmarkH}"></div>
+      <img class="banner" src="../img/banner.jpg" alt="banner">
+      <div class="banner-mark"></div>
       <div class="banner-content">
         <div class="banner-text text-center">互联网+「建筑」资质云库平台</div>
         <home-search></home-search>
@@ -12,7 +10,7 @@
     </div>
     <div class="home-hot-box">
       <div class="serve">
-        <home-con-title title="平台服务,PLATFORM SERVICE"></home-con-title>
+        <head-title title="平台服务,PLATFORM SERVICE"></head-title>
         <div class="serve-list clearfix">
           <div class="serve-list-item">
             <img class="serve-list-item__icon" src="../img/serve1.png" alt>
@@ -57,7 +55,7 @@
     </div>
     <div class="home-content">
       <div class="market">
-        <home-con-title title="交易市场,PLATFORM SERVICE"></home-con-title>
+        <head-title title="交易市场,PLATFORM SERVICE"></head-title>
         <div
           class="market-item clearfix"
           style="background: linear-gradient(45deg, #128bed, #7e5aff) no-repeat;"
@@ -374,7 +372,7 @@
         </div>
       </div>
       <div class="operator">
-        <home-con-title title="推荐运营商,RECOMMENDED CARRIER"></home-con-title>
+        <head-title title="推荐运营商,RECOMMENDED CARRIER"></head-title>
         <div class="clearfix operator-wrap">
           <div class="operator-item">
             <div
@@ -441,71 +439,24 @@
         <button class="operator-view-more-btn" type="button">查看更多运营商</button>
       </div>
     </div>
-    <div class="footer-line">
-      <ad-banner :adshow="adshow" :positionType="positionType"></ad-banner>
-    </div>
-    <site-footer></site-footer>
   </div>
 </template>
 
 <script>
-import SiteTop from "@/components/SiteTop";
-import Navbar from "@/components/Navbar";
 import HomeSearch from "@/components/HomeSearch";
-import HomeConTitle from "@/components/HomeConTitle";
-import SiteFooter from "@/components/SiteFooter";
-AdBanner;
-import AdBanner from "@/components/AdBanner";
-import { handleScrollHeader } from "@/utils/util";
+import HeadTitle from "@/components/HeadTitle";
+
 
 export default {
   name: "home",
   components: {
-    SiteTop,
-    Navbar,
     HomeSearch,
-    HomeConTitle,
-    SiteFooter,
-    AdBanner
+    HeadTitle,
   },
-  mounted() {
-    window.onload = () => {
-      window.scrollTo(0, 0);
-      this.PageContentHeight = this.$refs.home.clientHeight;
-      this.htmlHeight = document.body.clientHeight;
-      handleScrollHeader(resp => {
-        if (resp.currentTop > 300) {
-          this.adshow = true;
-        } else {
-          this.adshow = false;
-        }
-        if (resp.currentTop > this.finalPx) {
-          this.positionType = "absolute";
-        }
-        if (resp.currentTop < this.finalPx) {
-          this.positionType = "fixed";
-        }
-      });
-      window.addEventListener(
-        "resize",
-        event => {
-          clearTimeout(timer);
-          let timer = setTimeout(() => {
-            this.htmlHeight = document.body.clientHeight;
-			this.imgload();
-          }, 10);
-        },
-        false
-      );
-    };
-  },
+  mounted() {},
   data() {
     return {
-      positionType: "fixed",
-      htmlHeight: 0,
-      PageContentHeight: 0,
-      adshow: false,
-      bannerMmarkH: null,
+    //   bannerMmarkH: null,
       serveInfo: {
         zzqg: 1,
         zzcs: 26,
@@ -515,9 +466,6 @@ export default {
     };
   },
   computed: {
-    finalPx() {
-      return this.PageContentHeight - this.htmlHeight - 345;
-    },
     formatZzqg() {
       return parseInt(this.serveInfo.zzqg).toLocaleString();
     },
@@ -532,9 +480,9 @@ export default {
     }
   },
   methods: {
-    imgload() {
-      this.bannerMmarkH = this.$refs.bannerWrap.offsetHeight + "px";
-	}
+    // imgload() {
+    //   this.bannerMmarkH = this.$refs.bannerWrap.offsetHeight + "px";
+    // }
   }
 };
 </script>
@@ -549,6 +497,7 @@ $operatorItem: 285;
     .banner-mark {
       position: absolute;
       top: 0;
+	  bottom: 0;
       width: 100%;
       background-color: rgba(39, 45, 101, 0.7);
     }
@@ -863,11 +812,6 @@ $operatorItem: 285;
         color: #999;
       }
     }
-  }
-  .footer-line {
-    position: absolute;
-    width: 100%;
-    height: 1px;
   }
 }
 </style>

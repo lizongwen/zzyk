@@ -6,11 +6,11 @@
       </div>
       <div class="site-wish">全国首家资质运营服务平台</div>
       <ul class="site-nav">
-        <li class="site-nav__li site-nav--active">
-          <a href="javascript:;">首页</a>
+        <li class="site-nav__li">
+          <router-link to="/home">首页</router-link>
         </li>
         <li class="site-nav__li">
-          <a href="javascript:;">交易市场</a>
+          <router-link to="/market">交易市场</router-link>
         </li>
         <li class="site-nav__li">
           <a href="javascript:;">资质运营服务</a>
@@ -20,6 +20,12 @@
         </li>
         <li class="site-nav__li">
           <a href="javascript:;">资质计算器</a>
+        </li>
+        <li class="site-nav__li">
+          <a href="javascript:;">资质导航</a>
+        </li>
+        <li class="site-nav__li">
+          <a href="javascript:;">关于我们</a>
         </li>
       </ul>
     </div>
@@ -48,12 +54,12 @@ export default {};
 .site-wish {
   float: left;
   margin: 34px 0 0 29px;
-  font-family:STKaiti;
-  font-size:16px;
+  font-family: STKaiti;
+  font-size: 16px;
 }
 .site-nav {
   float: right;
-  width: 636px;
+  width: 720px;
   height: 100%;
   overflow: hidden;
 }
@@ -63,14 +69,12 @@ export default {};
   padding-top: 33px;
   font-size: 18px;
   &:not(:last-child) {
-    margin-right: 51px;
+    margin-right: 24px;
   }
   a {
     color: #222;
   }
-}
-.site-nav--active {
-  a {
+  .router-link-active {
     color: #1091ff;
   }
 }

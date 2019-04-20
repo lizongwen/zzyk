@@ -2,9 +2,12 @@ import Vue from 'vue'
 import {
 	message,
 	Rate,
-	Button
+	Button,
+	Breadcrumb,
+	Icon,
+	Pagination
 } from 'ant-design-vue'
 
-Vue.use(Rate)
-Vue.use(Button)
+Vue.use(Rate).use(Button).use(Breadcrumb).use(Icon).use(Pagination)
+
 Vue.prototype.$message=message

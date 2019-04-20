@@ -19,10 +19,11 @@ export default {
 		isShow:true
 	};
   },
+  mounted(){
+  },
   methods: {
     closeAdbanner() {
 		this.isShow=false;
-    //   this.$emit('closeAdbanner');
     },
     goPage(name) {
       alert("立即咨询");

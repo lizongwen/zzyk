@@ -1,39 +1,35 @@
 <template>
-  <div class="home-con-title">
+  <div class="home-con-title clearfix">
     <div class="title__line"></div>
-    <div class="title__name">
-      <div>{{titleName}}</div>
-      <div class="en">{{titleEnName}}</div>
-    </div>
+    <div class="title__name">{{titleName}}</div>
     <div class="title__line"></div>
+    <div class="title__name--en">{{titleEnName}}</div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HomeConTitle',
-  props: ['title'],
+  name: "HomeConTitle",
+  props: ["title"],
   data() {
-    return {
-
-    }
+    return {};
   },
   computed: {
     titleName() {
-      return this.title.split(',')[0]
+      return this.title.split(",")[0];
     },
     titleEnName() {
-      return this.title.split(',')[1]
+      return this.title.split(",")[1];
     }
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>
 .home-con-title {
-  overflow: hidden;
+  position: relative;
   width: 352px;
-  margin: 0 auto 15px auto;
+  margin: 0 auto 35px auto;
   .title__line {
     float: left;
     width: 100px;
@@ -46,13 +42,17 @@ export default {
   }
   .title__name {
     float: left;
-	width: 152px;
+    width: 152px;
     text-align: center;
     font-size: 18px;
     color: #666;
-    .en {
-      font-size: 12px;
-    }
+  }
+  .title__name--en {
+    position: absolute;
+    bottom: -15px;
+	width:100%;
+    font-size: 12px;
+	text-align: center;
   }
 }
 </style>
