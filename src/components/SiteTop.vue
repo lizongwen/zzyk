@@ -6,25 +6,48 @@
       </div>
       <div class="site-top-right">
         <div v-if="!loginFlag" class="site-entry">
-          <a href="javascript:;">登录</a>
-          <a href="javascript:;">注册</a>
+          <a href="javascript:;" @click="showLogin">登录</a>
+          <a href="javascript:;" @click="showRegister">注册</a>
         </div>
         <div v-else></div>
       </div>
     </div>
+    <login ref="login" @showRegister="showRegister"/>
+    <register ref="register"/>
   </div>
 </template>
 
 <script>
+import Login from "@/components/Login";
+import Register from "@/components/Register";
 export default {
   name: "siteTop",
   data() {
     return {
       loginFlag: false
     };
+  },
+  methods: {
+    showLogin() {
+      this.$refs.login.showView();
+    },
+    showRegister() {
+      this.$refs.register.showView();
+    }
+  },
+  components: {
+    Login,
+    Register
   }
 };
 </script>
+<style lang="scss">
+.site-top {
+  .rt {
+    color: red;
+  }
+}
+</style>
 
 <style lang="scss" scoped>
 .site-top {

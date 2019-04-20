@@ -176,7 +176,6 @@ export default {
       }
     },
     selectItem(target, index) {
-      console.log(index);
       this[`${target}CurrentSel`] = index;
     }
   }
