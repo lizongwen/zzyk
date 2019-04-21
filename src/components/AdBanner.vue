@@ -1,5 +1,5 @@
 <template>
-  <transition>
+  <transition name="ad">
     <div class="ad-banner" v-show="adshow" :style="{position:positionType}" v-if="isShow">
       <div class="ad-banner-inner">
         <img class="ad-img" src="../img/ad-img.png" alt="推广图">
@@ -32,18 +32,18 @@ export default {
 };
 </script>
 <style lang="scss">
-.v-enter-active,
-.v-leave-active {
+.ad-enter-active,
+.ad-leave-active {
   transition: opacity 0.5s;
 }
 
-.v-enter,
-.v-leave-to {
+.ad-enter,
+.ad-leave-to {
   opacity: 0;
 }
 
-.v-leave,
-.v-enter-to {
+.ad-leave,
+.ad-enter-to {
   opacity: 1;
 }
 </style>
