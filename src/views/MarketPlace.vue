@@ -26,13 +26,19 @@
       <div class="clearfix">
         <market-card
           :markData="item"
-          class="fl"
+          class="mark-data-item fl"
           v-for="(item,index) in markData"
           :key="index"
           :style="3==index%4?{'margin-right':0}:null"
         />
       </div>
-      <a-pagination class="text-center" :defaultPageSize="8" :defaultCurrent="1" :total="22" @change="onChangePage"/>
+      <a-pagination
+        class="text-center"
+        :defaultPageSize="8"
+        :defaultCurrent="1"
+        :total="22"
+        @change="onChangePage"
+      />
     </div>
     <div class="market-popular">
       <div class="market-popular-wrap">
@@ -231,6 +237,12 @@ export default {
   .main-wrap {
     width: 1200px;
     margin: 0 auto 20px;
+    .mark-data-item {
+      transition: transform 0.5s ease-in-out;
+      &:hover {
+        transform: translateY(-15px);
+      }
+    }
   }
   .market-popular {
     height: 403px;
