@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>资质云库 - 全国首家资质运营服务平台</title>
+	<link rel="stylesheet" href="../style/base.css">
+	<link rel="stylesheet" href="../style/home.css">
+</head>
+
+<body>
+	<div id="app">
+		<div class="site-baseview" ref="siteBase">
+			<!-- 站点顶部 -->
+			<div class="site-top">
+				<div class="site-top-nav">
+					<div class="site-top-left">
+						<img class="gg-icon" src="../img/gg.png">热门资讯：资质云库V1.0版本正式上线，资质运营，从未如此性感！
+					</div>
+					<div class="site-top-right">
+						<div v-if="!loginFlag" class="site-entry">
+							<a href="javascript:;" id="login">登录</a>
+							<a href="javascript:;" id="register">注册</a>
+						</div>
+						<div v-else></div>
+					</div>
+				</div>
+			</div>
+			<!-- /站点顶部 -->
+			<!-- 顶部导航 -->
+			<div class="navbar">
+				<div class="navbar-content">
+					<div class="site-logo">
+						<img src="../img/logo.jpg" alt="logo">
+					</div>
+					<div class="site-wish">全国首家资质运营服务平台</div>
+					<ul class="site-nav">
+						<li class="site-nav__li">
+							<a href="home.html">首页</a>
+						</li>
+						<li class="site-nav__li">
+							<a href="market.html">交易市场</a>
+						</li>
+						<li class="site-nav__li">
+							<a href="javascript:;">资质运营服务</a>
+						</li>
+						<li class="site-nav__li">
+							<a href="javascript:;">建筑资质云平台</a>
+						</li>
+						<li class="site-nav__li">
+							<a href="javascript:;">资质计算器</a>
+						</li>
+						<li class="site-nav__li">
+							<a href="javascript:;">资质导航</a>
+						</li>
+						<li class="site-nav__li">
+							<a href="javascript:;">关于我们</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- /顶部导航 -->
+			<div class="home">
+				<div class="banner-wrap" ref="bannerWrap">
+					<img class="banner" src="../img/banner.jpg" alt="banner">
+					<div class="banner-mark"></div>
+					<div class="banner-content">
+						<div class="banner-text text-center">互联网+「建筑」资质云库平台</div>
+						<div class="home-search">
+							<div>
+								<div class="search-category clearfix" id="searchCategory">
+									<a class="search-category__item search-category__item--active"
+										href="javascript:;">资质</a>
+									<a class="search-category__item" href="javascript:;">技术负责人</a>
+								</div>
+								<div class="search-input-wrap">
+									<input class="search-input" type="text" placeholder="请输入您的要求">
+									<button type="button" class="search-btn">搜一下</button>
+									<div class="hot-word">
+										<dl>
+											<dt>本周热搜：</dt>
+											<dd>幕墙技术负责人</dd>
+											<dd>市政</dd>
+											<dd>电子智能</dd>
+											<dd>装饰</dd>
+											<dd>房建三</dd>
+											<dd>智能化</dd>
+											<dd>幕墙</dd>
+										</dl>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="home-hot-box">
+					<div class="serve">
+						<div class="home-con-title clearfix">
+							<div class="title__line"></div>
+							<div class="title__name">平台服务</div>
+							<div class="title__line"></div>
+							<div class="title__name--en">PLATFORM SERVICE</div>
+						</div>
+						<div class="serve-list clearfix">
+							<div class="serve-list-item">
+								<img class="serve-list-item__icon" src="../img/serve1.png" alt>
+								<p class="serve-list-item__text">出售求购对接</p>
+								<p class="serve-list-item__textdesc">交易需求平台客服对接</p>
+							</div>
+							<div class="serve-list-item">
+								<img class="serve-list-item__icon" src="../img/serve2.png" alt>
+								<p class="serve-list-item__text">信息核验</p>
+								<p class="serve-list-item__textdesc">交易前核验真实性</p>
+							</div>
+							<div class="serve-list-item">
+								<img class="serve-list-item__icon" src="../img/serve3.png" alt>
+								<p class="serve-list-item__text">平台变更担保</p>
+								<p class="serve-list-item__textdesc">优质事务所变更服务</p>
+							</div>
+							<div class="serve-list-item">
+								<img class="serve-list-item__icon" src="../img/serve4.png" alt>
+								<p class="serve-list-item__text">平台先行赔付</p>
+								<p class="serve-list-item__textdesc">交易纠纷平台先赔</p>
+							</div>
+						</div>
+						<div class="serve-info clearfix">
+							<div class="serve-info-item">
+								资质求购数据：
+								<span class="serve-info__count">1</span>条
+							</div>
+							<div class="serve-info-item">
+								资质出售数据：
+								<span class="serve-info__count">26</span>条
+							</div>
+							<div class="serve-info-item">
+								关键词搜索：
+								<span class="serve-info__count">62</span>条
+							</div>
+							<div class="serve-info-item">
+								网站浏览量：
+								<span class="serve-info__count">2,033</span>条
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="home-content">
+					<div class="market">
+						<div class="home-con-title clearfix">
+							<div class="title__line"></div>
+							<div class="title__name">交易市场</div>
+							<div class="title__line"></div>
+							<div class="title__name--en">PLATFORM SERVICE</div>
+						</div>
+						<div class="market-item clearfix"
+							style="background: linear-gradient(45deg, #128bed, #7e5aff) no-repeat;">
+							<div class="market-head">
+								<div class="market-head__title">
+									<span>资质出售</span>
+								</div>
+								<div class="market-head-content-wrap">
+									<div class="market-head-content">
+										<span class="market-head-content__title">寻求商机（条）</span>
+										<div class="market-head-content-count-wrap">
+											<div class="count">
+												<span>2</span>
+											</div>
+											<div class="count">
+												<span>6</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="market-btn-wrap">查看更多</div>
+							</div>
+							<div class="market-content clearfix">
+								<span class="before"
+									style="border-color: transparent transparent #7e5aff  #7e5aff;"></span>
+								<div class="market-content__item">
+									<div class="m-c-i__title">地基贰级</div>
+									<div class="m-c-i-info">
+										<div>
+											内容：
+											<span>一手资源，诚心转让</span>
+										</div>
+										<div>
+											地区：
+											<span>合肥市</span>
+										</div>
+										<div>
+											时间：
+											<span>2019-4-4 14:29:24</span>
+										</div>
+									</div>
+									<div class="m-c-i-price-wrap">
+										价格：
+										<span class="m-c-i-price">80</span>
+									</div>
+									<button type="button" class="m-c-i-contact-btn">立即沟通</button>
+									<img class="m-c-i-flag-icon" src="../img/chu.png">
+								</div>
+								<div class="market-content__item">
+									<div class="m-c-i__title">地基贰级</div>
+									<div class="m-c-i-info">
+										<div>
+											内容：
+											<span>一手资源，诚心转让</span>
+										</div>
+										<div>
+											地区：
+											<span>合肥市</span>
+										</div>
+										<div>
+											时间：
+											<span>2019-4-4 14:29:24</span>
+										</div>
+									</div>
+									<div class="m-c-i-price-wrap">
+										价格：
+										<span class="m-c-i-price">80</span>
+									</div>
+									<button type="button" class="m-c-i-contact-btn">立即沟通</button>
+									<img class="m-c-i-flag-icon" src="../img/chu.png">
+								</div>
+								<div class="market-content__item">
+									<div class="m-c-i__title">地基贰级</div>
+									<div class="m-c-i-info">
+										<div>
+											内容：
+											<span>一手资源，诚心转让</span>
+										</div>
+										<div>
+											地区：
+											<span>合肥市</span>
+										</div>
+										<div>
+											时间：
+											<span>2019-4-4 14:29:24</span>
+										</div>
+									</div>
+									<div class="m-c-i-price-wrap">
+										价格：
+										<span class="m-c-i-price">80</span>
+									</div>
+									<button type="button" class="m-c-i-contact-btn">立即沟通</button>
+									<img class="m-c-i-flag-icon" src="../img/chu.png">
+								</div>
+								<div class="market-content__item">
+									<div class="m-c-i__title">地基贰级</div>
+									<div class="m-c-i-info">
+										<div>
+											内容：
+											<span>一手资源，诚心转让</span>
+										</div>
+										<div>
+											地区：
+											<span>合肥市</span>
+										</div>
+										<div>
+											时间：
+											<span>2019-4-4 14:29:24</span>
+										</div>
+									</div>
+									<div class="m-c-i-price-wrap">
+										价格：
+										<span class="m-c-i-price">80</span>
+									</div>
+									<button type="button" class="m-c-i-contact-btn">立即沟通</button>
+									<img class="m-c-i-flag-icon" src="../img/chu.png">
+								</div>
+								<span class="after"
+									style="border-color: #3c78f4 transparent transparent #1977d1;"></span>
+							</div>
+						</div>
+						<div class="market-item clearfix"
+							style="background: linear-gradient(45deg, #f07f4d, #f76a7b) no-repeat;">
+							<div class="market-head">
+								<div class="market-head__title">
+									<span>资质求购</span>
+								</div>
+								<div class="market-head-content-wrap">
+									<div class="market-head-content">
+										<span class="market-head-content__title">寻求商机（条）</span>
+										<div class="market-head-content-count-wrap">
+											<div class="count">
+												<span>2</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="market-btn-wrap">查看更多</div>
+							</div>
+							<div class="market-content clearfix">
+								<span class="before"
+									style="border-color:  transparent transparent #f76a7b #f76a7b;"></span>
+								<div class="market-content__item">
+									<div class="m-c-i__title">地基贰级</div>
+									<div class="m-c-i-info">
+										<div>
+											内容：
+											<span>诚心买17年的装饰装修二级</span>
+										</div>
+										<div>
+											地区：
+											<span>合肥市</span>
+										</div>
+										<div>
+											时间：
+											<span>2019-4-4 14:29:24</span>
+										</div>
+									</div>
+									<div class="m-c-i-price-wrap">
+										价格：
+										<span class="m-c-i-price">80</span>
+									</div>
+									<button type="button" class="m-c-i-contact-btn">立即沟通</button>
+									<img class="m-c-i-flag-icon" src="../img/qiu.png">
+								</div>
+								<div class="market-content__item">
+									<div class="m-c-i__title">地基贰级</div>
+									<div class="m-c-i-info">
+										<div>
+											内容：
+											<span>诚心买17年的装饰装修二级</span>
+										</div>
+										<div>
+											地区：
+											<span>合肥市</span>
+										</div>
+										<div>
+											时间：
+											<span>2019-4-4 14:29:24</span>
+										</div>
+									</div>
+									<div class="m-c-i-price-wrap">
+										价格：
+										<span class="m-c-i-price">80</span>
+									</div>
+									<button type="button" class="m-c-i-contact-btn">立即沟通</button>
+									<img class="m-c-i-flag-icon" src="../img/qiu.png">
+								</div>
+								<span class="after"
+									style="border-color: #f77261 transparent transparent #f77261;"></span>
+							</div>
+						</div>
+						<div class="market-item clearfix"
+							style="background: linear-gradient(45deg, #bf5aff, #7e5aff) no-repeat;">
+							<div class="market-head">
+								<div class="market-head__title">
+									<span>技术负责人</span>
+								</div>
+								<div class="market-head-content-wrap">
+									<div class="market-head-content">
+										<span class="market-head-content__title">寻求商机（条）</span>
+										<div class="market-head-content-count-wrap">
+											<div class="count">
+												<span>2</span>
+											</div>
+											<div class="count">
+												<span>6</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="market-btn-wrap">查看更多</div>
+							</div>
+							<div class="market-content clearfix">
+								<span class="before"
+									style="border-color:  transparent transparent #7e5aff #7e5aff;"></span>
+								<div class="market-content__item">
+									<div class="m-c-i__title">电子智能化技术负责人</div>
+									<div class="m-c-i-info">
+										<div>
+											内容：
+											<span>一手资源，诚心转让</span>
+										</div>
+										<div>
+											地区：
+											<span>合肥市</span>
+										</div>
+										<div>
+											时间：
+											<span>2019-4-4 14:29:24</span>
+										</div>
+									</div>
+									<div class="m-c-i-price-wrap">
+										价格：
+										<span class="m-c-i-price">4W</span>
+									</div>
+									<button type="button" class="m-c-i-contact-btn">立即沟通</button>
+									<img class="m-c-i-flag-icon" src="../img/chu.png">
+								</div>
+								<div class="market-content__item">
+									<div class="m-c-i__title">电子智能化技术负责人</div>
+									<div class="m-c-i-info">
+										<div>
+											内容：
+											<span>一手资源，诚心转让</span>
+										</div>
+										<div>
+											地区：
+											<span>合肥市</span>
+										</div>
+										<div>
+											时间：
+											<span>2019-4-4 14:29:24</span>
+										</div>
+									</div>
+									<div class="m-c-i-price-wrap">
+										价格：
+										<span class="m-c-i-price">4W</span>
+									</div>
+									<button type="button" class="m-c-i-contact-btn">立即沟通</button>
+									<img class="m-c-i-flag-icon" src="../img/chu.png">
+								</div>
+								<div class="market-content__item">
+									<div class="m-c-i__title">电子智能化技术负责人</div>
+									<div class="m-c-i-info">
+										<div>
+											内容：
+											<span>一手资源，诚心转让</span>
+										</div>
+										<div>
+											地区：
+											<span>合肥市</span>
+										</div>
+										<div>
+											时间：
+											<span>2019-4-4 14:29:24</span>
+										</div>
+									</div>
+									<div class="m-c-i-price-wrap">
+										价格：
+										<span class="m-c-i-price">4W</span>
+									</div>
+									<button type="button" class="m-c-i-contact-btn">立即沟通</button>
+									<img class="m-c-i-flag-icon" src="../img/chu.png">
+								</div>
+								<div class="market-content__item">
+									<div class="m-c-i__title">电子智能化技术负责人</div>
+									<div class="m-c-i-info">
+										<div>
+											内容：
+											<span>一手资源，诚心转让</span>
+										</div>
+										<div>
+											地区：
+											<span>合肥市</span>
+										</div>
+										<div>
+											时间：
+											<span>2019-4-4 14:29:24</span>
+										</div>
+									</div>
+									<div class="m-c-i-price-wrap">
+										价格：
+										<span class="m-c-i-price">4W</span>
+									</div>
+									<button type="button" class="m-c-i-contact-btn">立即沟通</button>
+									<img class="m-c-i-flag-icon" src="../img/chu.png">
+								</div>
+								<span class="after"
+									style="border-color: #a65aff transparent transparent #a65aff;"></span>
+							</div>
+						</div>
+						<div class="public-link">
+							<img src="../img/public-link.jpg" alt="广告位">
+						</div>
+					</div>
+					<div class="operator">
+						<div class="home-con-title clearfix">
+							<div class="title__line"></div>
+							<div class="title__name">推荐运营商</div>
+							<div class="title__line"></div>
+							<div class="title__name--en">RECOMMENDED CARRIER</div>
+						</div>
+						<div class="clearfix operator-wrap">
+							<div class="operator-item">
+								<div class="operator-assess"
+									style="background: url('../../img/operator_top1.jpg') no-repeat;">
+									<div class="operator-count">6件</div>
+									<div>
+										<img src="../img/star.png" alt="">
+										<img src="../img/star.png" alt="">
+										<img src="../img/star.png" alt="">
+										<img src="../img/star1.png" alt="">
+										<img src="../img/star1.png" alt="">
+									</div>
+								</div>
+								<img class="operator-logo" src="../img/merchant-icon.png" alt="商家logo">
+								<div class="operator-info">
+									<div class="operator-name">运营商名称</div>
+									<div class="operator-customer-name">客服：Mona</div>
+									<button class="operator-btn" type="button">了解详情</button>
+								</div>
+							</div>
+							<div class="operator-item">
+								<div class="operator-assess"
+									style="background: url('../../img/operator_top2.jpg') no-repeat;">
+									<div class="operator-count">6件</div>
+									<div>
+										<img src="../img/star.png" alt="">
+										<img src="../img/star.png" alt="">
+										<img src="../img/star.png" alt="">
+										<img src="../img/star1.png" alt="">
+										<img src="../img/star1.png" alt="">
+									</div>
+								</div>
+								<img class="operator-logo" src="../img/merchant-icon.png" alt="商家logo">
+								<div class="operator-info">
+									<div class="operator-name">运营商名称</div>
+									<div class="operator-customer-name">客服：Mona</div>
+									<button class="operator-btn" type="button">了解详情</button>
+								</div>
+							</div>
+							<div class="operator-item">
+								<div class="operator-assess"
+									style="background: url('../../img/operator_top3.jpg') no-repeat;">
+									<div class="operator-count">6件</div>
+									<div>
+										<img src="../img/star.png" alt="">
+										<img src="../img/star.png" alt="">
+										<img src="../img/star.png" alt="">
+										<img src="../img/star1.png" alt="">
+										<img src="../img/star1.png" alt="">
+									</div>
+								</div>
+								<img class="operator-logo" src="../img/merchant-icon.png" alt="商家logo">
+								<div class="operator-info">
+									<div class="operator-name">运营商名称</div>
+									<div class="operator-customer-name">客服：Mona</div>
+									<button class="operator-btn" type="button">了解详情</button>
+								</div>
+							</div>
+							<div class="operator-item">
+								<div class="operator-assess"
+									style="background: url('../../img/operator_top4.jpg') no-repeat;">
+									<div class="operator-count">6件</div>
+									<div>
+										<img src="../img/star.png" alt="">
+										<img src="../img/star.png" alt="">
+										<img src="../img/star.png" alt="">
+										<img src="../img/star1.png" alt="">
+										<img src="../img/star1.png" alt="">
+									</div>
+								</div>
+								<img class="operator-logo" src="../img/merchant-icon.png" alt="商家logo">
+								<div class="operator-info">
+									<div class="operator-name">运营商名称</div>
+									<div class="operator-customer-name">客服：Mona</div>
+									<button class="operator-btn" type="button">了解详情</button>
+								</div>
+							</div>
+						</div>
+						<button class="operator-view-more-btn" type="button">查看更多运营商</button>
+					</div>
+				</div>
+			</div>
+			<div class="footer-line">
+				<div class="ad-banner" id="adBanner" style="position: fixed;display: none;">
+					<div class="ad-banner-inner">
+						<img class="ad-img" src="../img/ad-img.png" alt="推广图">
+						<img class="ad-img1" src="../img/ad-img1.png" alt="广告语图">
+						<img class="ad-img2" src="../img/ad-zx-btn.png" alt="立即咨询按钮">
+						<img id="closeAdbanner" class="ad-img3" src="../img/ad-close.png" alt="关闭按钮">
+					</div>
+				</div>
+			</div>
+			<div class="site-footer">
+				<div class="site-footer-wrap">
+					<div class="site-footer-info">
+						<div class="site-footer-l-info">
+							<div class="site-footer-l-kf">
+								<div class="tel">
+									客服支持
+									<p>000-00000000</p>
+								</div>
+								<div class="qq">
+									在线咨询
+									<p>09:00—17:50</p>
+								</div>
+							</div>
+							<div class="site-footer-l-qrcode">
+								<img src="../img/qrcode.png">
+								<p>微信公众号</p>
+							</div>
+						</div>
+						<div class="site-footer-r-info">
+							<dl>
+								<dt>资质服务运营</dt>
+								<dd>
+									<a href="javascript:;">资质办理</a>
+								</dd>
+								<dd>
+									<a href="javascript:;">人才服务</a>
+								</dd>
+								<dd>
+									<a href="javascript:;">资质转让</a>
+								</dd>
+							</dl>
+							<dl>
+								<dt>平台简介</dt>
+								<dd>
+									<a href="javascript:;">商务合作</a>
+								</dd>
+								<dd>
+									<a href="javascript:;">联系方式</a>
+								</dd>
+								<dd>
+									<a href="javascript:;">关于我们</a>
+								</dd>
+							</dl>
+							<dl>
+								<dt>友情链接</dt>
+								<dd>
+									<a href="javascript:;">安徽省住房和城乡建设厅</a>
+								</dd>
+								<dd>
+									<a href="javascript:;">安徽省建筑市场监管和公共服务平台</a>
+								</dd>
+								<dd>
+									<a href="javascript:;">全国建筑市场监管和公共服务平台</a>
+								</dd>
+							</dl>
+						</div>
+					</div>
+				</div>
+				<div class="site-copy-wrap">
+					<div>免责声明</div>
+					<div>Copyright 2018-2026 资质云库 皖ICP备14055920号</div>
+					<div>本站是一个信息交互平台,用户所发布信息与本站无关!请勿发布违法信息！</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="../js/libs/jquery-1.11.3.min.js"></script>
+	<script src="../js/libs/layer/layer.js"></script>
+	<script src="../js/common.js"></script>
+	<script src="../js/utils.js"></script>
+	<script>
+		$(function () {
+			var index = {
+				initPage: function () {
+					this.bandEvent();
+				},
+				bandEvent: function () {
+					$("#searchCategory").on('click', function (e) {
+						if (e.target.nodeName == 'A') {
+							$(e.target).addClass('search-category__item--active').siblings().removeClass('search-category__item--active');
+						}
+					});
+				}
+			}
+			index.initPage()
+		})
+	</script>
+</body>
+
+</html>

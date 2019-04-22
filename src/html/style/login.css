@@ -1,0 +1,29 @@
+/* 登录 */
+.login {
+	overflow: hidden;
+	padding: 19px 51px;
+  }
+  .login .login-logo {
+	display: block;
+	margin: 0 auto 54px;
+  }
+  .login .forget-password {
+	color: #128bed;
+	cursor: pointer;
+  }
+  .login .register {
+	color: #128bed;
+  }
+  .login .form {
+	position: relative;
+  }
+  .login .form .login-error {
+	position: absolute;
+	top: -23px;
+	font-weight: bold;
+	color: #f04134;
+  }
+  .login .form .login-error .error-text {
+	margin-left: 8px;
+  }
+  

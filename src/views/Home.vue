@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <div class="banner-wrap" ref="bannerWrap">
+    <div class="banner-wrap">
       <img class="banner" src="../img/banner.jpg" alt="banner">
       <div class="banner-mark"></div>
       <div class="banner-content">
@@ -480,9 +480,6 @@ export default {
     }
   },
   methods: {
-    // imgload() {
-    //   this.bannerMmarkH = this.$refs.bannerWrap.offsetHeight + "px";
-    // }
   }
 };
 </script>

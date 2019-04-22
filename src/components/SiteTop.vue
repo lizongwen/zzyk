@@ -41,13 +41,6 @@ export default {
   }
 };
 </script>
-<style lang="scss">
-.site-top {
-  .rt {
-    color: red;
-  }
-}
-</style>
 
 <style lang="scss" scoped>
 .site-top {
