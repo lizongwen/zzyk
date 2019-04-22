@@ -783,3 +783,12 @@ input:-ms-input-placeholder {
 .breadcrumb .ant-breadcrumb {
 	display: inline-block;
 }
+
+/* 弹出层样式覆盖 */
+.layui-layer{
+	border-radius: 6px!important;
+}
+/*bootstrap样式覆盖*/
+.form-group{
+	margin-bottom:1.5rem;
+}

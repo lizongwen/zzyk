@@ -33,10 +33,21 @@ $(function () {
 		$("#login").on('click', function () {
 			layer.open({
 				title: false,
-				area: ['495px','445px'],
-				closeBtn:false,
+				area: ['495px','439px'],
+				skin:'login-dialog',
+				closeBtn:0,
 				type: 2,
 				content: 'login.html'
+			});
+		});
+		$("#register").on('click', function () {
+			layer.open({
+				title: false,
+				area: ['495px','439px'],
+				skin:'register-dialog',
+				closeBtn:0,
+				type: 2,
+				content: 'register.html'
 			});
 		})
 	};

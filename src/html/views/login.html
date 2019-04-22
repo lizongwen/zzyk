@@ -6,64 +6,38 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Document</title>
+	<link rel="stylesheet" href="../js/libs/bootstrap4/css/bootstrap.min.css">
 	<link rel="stylesheet" href="../style/base.css">
 	<link rel="stylesheet" href="../style/login.css">
-	<!-- <link rel="stylesheet" href="../js/libs/bootstrap4/css/bootstrap.min.css"> -->
 </head>
 
 <body>
 	<div class="login">
 		<img class="login-logo" src="../img/logo.png" alt="logo">
-		<form class="form ant-form ant-form-horizontal">
-			<div class="ant-row ant-form-item">
-				<div class="ant-form-item-control-wrapper">
-					<div class="ant-form-item-control">
-						<span class="ant-form-item-children">
-							<input placeholder="请输入手机号" type="text" size="large" id="userphone"
-								class="ant-input ant-input-lg">
-						</span>
-					</div>
-				</div>
+		<img id="close" class="diaglog_close" src="../img/diaglog_close.png" alt="关闭">
+		<form>
+			<div class="form-group">
+				<input type="email" class="form-control" id="userphone" placeholder="请输入手机号">
 			</div>
-			<div class="ant-row ant-form-item">
-				<div class="ant-form-item-control-wrapper">
-					<div class="ant-form-item-control">
-						<span class="ant-form-item-children">
-							<input placeholder="请输入密码" type="password" size="large" id="password"
-								class="ant-input ant-input-lg">
-						</span>
-					</div>
-				</div>
+			<div class="form-group">
+				<input type="password" class="form-control" id="password" placeholder="请输入密码">
 			</div>
-			<div class="ant-row ant-form-item">
-				<div class="ant-form-item-control-wrapper">
-					<div class="ant-form-item-control has-success">
-						<span class="ant-form-item-children">
-							<label class="ant-checkbox-wrapper ant-checkbox-wrapper-checked"><span
-									class="ant-checkbox ant-checkbox-checked">
-									<input id="remember" type="checkbox"
-										class="ant-checkbox-input" value=""><span
-										class="ant-checkbox-inner"></span></span><span>下次自动登陆</span></label><a
-								href="javascript:;" class="forget-password fr">忘记密码?</a><button type="submit"
-								class="ant-btn ant-btn-primary ant-btn-lg ant-btn-block"><span>登 录</span></button><a
-								href="javascript:;" class="register">免费注册&gt;&gt;</a></span>
-
-					</div>
-				</div>
+			<div class="form-check">
+				<label class="form-check-label">
+					<input class="form-check-input" type="checkbox"> 下次自动登录
+				</label>
+				<a class="forget-password fr" href="javascript:;">忘记密码?</a>
 			</div>
-			<div class="login-error" style="display: none;"><i class="anticon anticon-minus-circle"><svg
-						viewBox="64 64 896 896" data-icon="minus-circle" width="1em" height="1em" fill="currentColor"
-						aria-hidden="true" class="">
-						<path
-							d="M696 480H328c-4.4 0-8 3.6-8 8v48c0 4.4 3.6 8 8 8h368c4.4 0 8-3.6 8-8v-48c0-4.4-3.6-8-8-8z">
-						</path>
-						<path
-							d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z">
-						</path>
-					</svg></i><span class="error-text"></span></div>
+			<button type="submit" class="btn btn-primary btn-block btn-lg">登录</button>
 		</form>
-
 	</div>
+	<script src="../js/libs/jquery-1.11.3.min.js"></script>
+	<script>
+		$("#close").on('click',function(){
+			alert(11)
+			top.layer.closeAll();
+		})
+	</script>
 </body>
 
 </html>

@@ -1,29 +1,49 @@
 /* 登录 */
+
 .login {
+	position: relative;
 	overflow: hidden;
-	padding: 19px 51px;
-  }
-  .login .login-logo {
+	padding: 44px 75px 0;
+}
+
+.login .login-logo {
 	display: block;
 	margin: 0 auto 54px;
-  }
-  .login .forget-password {
+}
+
+.login .forget-password {
 	color: #128bed;
 	cursor: pointer;
-  }
-  .login .register {
+}
+
+.login .register {
 	color: #128bed;
-  }
-  .login .form {
+}
+
+.login .form {
 	position: relative;
-  }
-  .login .form .login-error {
+}
+
+.login .form .login-error {
 	position: absolute;
 	top: -23px;
 	font-weight: bold;
 	color: #f04134;
-  }
-  .login .form .login-error .error-text {
+}
+
+.login .form .login-error .error-text {
 	margin-left: 8px;
-  }
-  
+}
+
+.login .diaglog_close {
+	position: absolute;
+	top: 17px;
+	right: 20px;
+	cursor: pointer;
+}
+.login .form-group{
+	margin-bottom:30px;
+}
+.login .form-check{
+	margin-bottom:25px;
+}
