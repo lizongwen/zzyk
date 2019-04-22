@@ -212,9 +212,6 @@ export default {
       width: 125px;
       color: #222;
       cursor: pointer;
-      &:first-child {
-        //   width: 100px;
-      }
       &:hover {
         color: #128bed;
       }
