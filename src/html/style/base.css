@@ -787,6 +787,7 @@ input:-ms-input-placeholder {
 /* 弹出层样式覆盖 */
 .layui-layer{
 	border-radius: 6px!important;
+	overflow: hidden;
 }
 /*bootstrap样式覆盖*/
 .form-group{

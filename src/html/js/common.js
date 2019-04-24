@@ -43,7 +43,7 @@ $(function () {
 		$("#register").on('click', function () {
 			layer.open({
 				title: false,
-				area: ['495px','439px'],
+				area: ['495px','550px'],
 				skin:'register-dialog',
 				closeBtn:0,
 				type: 2,

@@ -8,16 +8,16 @@
 	<title>Document</title>
 	<link rel="stylesheet" href="../js/libs/bootstrap4/css/bootstrap.min.css">
 	<link rel="stylesheet" href="../style/base.css">
-	<link rel="stylesheet" href="../style/login.css">
+	<link rel="stylesheet" href="../style/login.register.css">
 </head>
 
 <body>
 	<div class="login">
 		<img class="login-logo" src="../img/logo.png" alt="logo">
 		<img id="close" class="diaglog_close" src="../img/diaglog_close.png" alt="关闭">
-		<form>
+		<form class="form">
 			<div class="form-group">
-				<input type="email" class="form-control" id="userphone" placeholder="请输入手机号">
+				<input type="text" class="form-control" id="userphone" placeholder="请输入手机号">
 			</div>
 			<div class="form-group">
 				<input type="password" class="form-control" id="password" placeholder="请输入密码">
@@ -29,12 +29,13 @@
 				<a class="forget-password fr" href="javascript:;">忘记密码?</a>
 			</div>
 			<button type="submit" class="btn btn-primary btn-block btn-lg">登录</button>
+			<a class="login-register" href="javascript:;" @click="showRegister">免费注册>></a>
+			<div class="login-error" v-show="error"><span class="error-text">您的用户名或密码错误</span></div>
 		</form>
 	</div>
 	<script src="../js/libs/jquery-1.11.3.min.js"></script>
 	<script>
 		$("#close").on('click',function(){
-			alert(11)
 			top.layer.closeAll();
 		})
 	</script>
