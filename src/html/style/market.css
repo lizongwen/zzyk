@@ -3,10 +3,6 @@
 	background-color: #f5f5f5;
 }
 
-.market-popular .title__line {
-	background-color: #747d96 !important;
-}
-
 .market .head-wrap {
 	width: 1200px;
 	margin: 0 auto 20px;
@@ -23,7 +19,6 @@
 	width: 285px;
 	height: 235px;
 	text-align: center;
-	background: url("../img/market_bg.jpg") no-repeat;
 }
 
 .market .head-wrap .head-r-wrap .head-r-wrap__btn {
@@ -55,10 +50,12 @@
 	margin-right: 50px;
 	cursor: pointer;
 }
-.market .search-summary .search-sort img{
-	margin-left:2px;
+
+.market .search-summary .search-sort img {
+	margin-left: 2px;
 	vertical-align: middle;
 }
+
 .market .search-summary .search-sort.active {
 	color: #148ced;
 }
@@ -71,18 +68,147 @@
 	color: #148ced;
 }
 
+.market .market-search .market-search-item {
+	position: relative;
+}
+
+.market .market-search .market-search-item:not(:last-child) {
+	border-bottom: 1px solid #f5f5f5;
+}
+
+.market .market-search .market-search-item .market-search-l {
+	position: absolute;
+	width: 120px;
+	top: 0;
+	bottom: 0;
+	padding-top: 15px;
+	padding-left: 25px;
+	background-color: #e5f3ff;
+}
+
+.market .market-search .market-search-item .market-search-r {
+	padding: 4px 0 4px 25px;
+	margin-left: 120px;
+	width: calc(100% - 120px);
+}
+
+.market .market-search .market-search-item .market-search-r-item {
+	margin-right: 80px;
+	line-height: 40px;
+}
+
+.market .market-search .market-search-item .market-search-r-item__label {
+	display: inline-block;
+	width: 125px;
+	color: #222;
+	cursor: pointer;
+}
+
+.market .market-search .market-search-item .market-search-r-item__label:hover {
+	color: #128bed;
+}
+
+.market .market-search .market-search-item .market-search-r-item__label--active {
+	color: #128bed;
+}
+
+.market .market-search .market-search-item .toggle-btn {
+	position: absolute;
+	width: 60px;
+	height: 24px;
+	right: 20px;
+	top: 13px;
+	padding-top: 0;
+	padding-right: 10px;
+	border: 1px solid #999;
+	border-radius: 4px;
+	color: #666;
+}
+
+.market .market-search .market-search-item .toggle-btn:after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	right: 4px;
+	margin-top: -3px;
+	width: 9px;
+	height: 5px;
+	background: url('../img/arrow_up_down.png') no-repeat;
+	background-position: 0 -6px
+}
+
+.market .market-search .market-search-item .toggle-btn.open:after {
+	background-position: 0 0;
+}
+
+/* 市场 */
+
 .market .main-wrap {
 	width: 1200px;
 	margin: 0 auto 20px;
 }
 
-.market .main-wrap .mark-data-item {
+.market .main-wrap .market-card-wrap>div {
+	margin: 0 20px 20px 0;
+}
+
+.market .main-wrap .market-card-wrap>div:nth-child(4n) {
+	margin-right: 0
+}
+
+.market .main-wrap .market-card-wrap>div {
 	transition: transform 0.5s ease-in-out;
 }
 
-.market .main-wrap .mark-data-item:hover {
+.market .main-wrap .market-card-wrap>:hover {
 	transform: translateY(-15px);
 }
+
+.market .main-wrap .market-card {
+	border-radius: 4px;
+	background-color: #fff;
+	width: 285px;
+	overflow: hidden;
+}
+
+.market .main-wrap .market-card .market-card-head {
+	padding: 13px 20px;
+	border-top: 6px solid #128bed;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.market .main-wrap .market-card .market-card-body {
+	padding-left: 20px;
+}
+
+.market .main-wrap .market-card .market-card-foot {
+	padding: 15px;
+}
+
+.market .main-wrap .market-card .market-card-foot_btn {
+	display: block;
+	margin: 5px auto 0;
+	width: 128px;
+	height: 36px;
+	background: #128bed;
+	color: #fff;
+}
+
+.market .main-wrap .market-card .market-price {
+	margin-bottom: 10px;
+}
+
+.market .main-wrap .market-card .market-price .priceNum {
+	font-size: 24px;
+	color: #ff6f00;
+}
+
+.market-card .market-content, .market-card .market-area, .market-card .market-date {
+	line-height: 22px;
+}
+
+/*热门推荐  */
 
 .market .market-popular {
 	height: 403px;
@@ -96,124 +222,6 @@
 	overflow: hidden;
 }
 
-.market-search .market-search-item {
-	position: relative;
-}
-
-.market-search .market-search-item:not(:last-child) {
-	border-bottom: 1px solid #f5f5f5;
-}
-
-.market-search .market-search-item .market-search-l {
-	position: absolute;
-	width: 120px;
-	top: 0;
-	bottom: 0;
-	padding-top: 15px;
-	padding-left: 25px;
-	background-color: #e5f3ff;
-}
-
-.market-search .market-search-item .market-search-r {
-	padding: 4px 0 4px 25px;
-	margin-left: 120px;
-	width: calc(100% - 120px);
-}
-
-.market-search .market-search-item .market-search-r-item {
-	margin-right: 80px;
-	line-height: 40px;
-}
-
-.market-search .market-search-item .market-search-r-item__label {
-	display: inline-block;
-	width: 125px;
-	color: #222;
-	cursor: pointer;
-}
-
-.market-search .market-search-item .market-search-r-item__label:hover {
-	color: #128bed;
-}
-
-.market-search .market-search-item .market-search-r-item__label--active {
-	color: #128bed;
-}
-
-.market-search .market-search-item .toggle-btn {
-	position: absolute;
-	width: 60px;
-	height: 24px;
-	right: 20px;
-	top: 13px;
-	padding-top:0;
-	padding-right: 10px;
-
-	border: 1px solid #999;
-	border-radius: 4px;
-	color: #666;
-}
-.market-search .market-search-item .toggle-btn:after {
-	content:'';
-	position: absolute;
-	top:50%;
-	right:4px;
-	margin-top:-3px;
-	width: 9px;
-	height:5px;
-	background: url('../img/arrow_up_down.png') no-repeat;
-	background-position: 0 -6px
-}
-.market-search .market-search-item .toggle-btn.open:after{
-	background-position: 0 0;
-}
-/* 市场 */
-
-.market-card {
-	border-radius: 4px;
-	background-color: #fff;
-	width: 285px;
-	margin: 0 20px 20px 0;
-	overflow: hidden;
-}
-
-.market-card:nth-child(4), .market-card:nth-child(8) {
-	margin-right: 0
-}
-
-.market-card .market-card-head {
-	padding: 13px 20px;
-	border-top: 6px solid #128bed;
-	font-size: 18px;
-	font-weight: bold;
-}
-
-.market-card .market-card-body {
-	padding-left: 20px;
-}
-
-.market-card .market-card-foot {
-	padding: 15px;
-}
-
-.market-card .market-card-foot_btn {
-	display: block;
-	margin: 5px auto 0;
-	width: 128px;
-	height: 36px;
-	background: #128bed;
-	color: #fff;
-}
-
-.market-card .market-price {
-	margin-bottom: 10px;
-}
-
-.market-card .market-price .priceNum {
-	font-size: 24px;
-	color: #ff6f00;
-}
-
-.market-card .market-content, .market-card .market-area, .market-card .market-date {
-	line-height: 22px;
+.market .market-popular .title__line {
+	background-color: #747d96 !important;
 }

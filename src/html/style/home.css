@@ -246,67 +246,7 @@
   padding-top: 24px;
   overflow: hidden;
 }
-.home .home-content .operator .operator-item {
-  position: relative;
-  float: left;
-  width: 285px;
-  height: 253px;
-  margin-right: calc((100% - 1140px) / 3);
-  border-radius: 4px;
-  overflow: hidden;
-}
-.home .home-content .operator .operator-item:last-child {
-  margin-right: 0;
-}
-.home .home-content .operator .operator-item .operator-assess {
-  height: 77px;
-  padding: 10px;
-  text-align: right;
-}
-.home .home-content .operator .operator-item .operator-count {
-  width: 48px;
-  height: 25px;
-  margin-left: auto;
-  padding: 2px 0;
-  border-radius: 12.5px;
-  text-align: center;
-  background-color: #fff;
-  color: #128bed;
-}
-.home .home-content .operator .operator-item .operator-logo {
-  position: absolute;
-  top: 49px;
-  left: 24px;
-}
-.home .home-content .operator .operator-item .operator-info {
-  height: calc(100% - 77px);
-  padding: 44px 0 0 23px;
-  background-color: #fff;
-}
-.home .home-content .operator .operator-item .operator-name {
-  font-size: 18px;
-}
-.home .home-content .operator .operator-item .operator-customer-name {
-  margin-top: 8px;
-  font-size: 12px;
-}
-.home .home-content .operator .operator-item .operator-btn {
-  width: 120px;
-  height: 32px;
-  margin: 28px 0 0 56px;
-  border-radius: 4px;
-  border: 1px solid #128bed;
-  color: #128bed;
-}
-.home .home-content .operator .operator-view-more-btn {
-  display: block;
-  width: 200px;
-  height: 42px;
-  margin: 37px auto 0;
-  border: 1px solid #999;
-  border-radius: 8px;
-  color: #999;
-}
+
 
 /* 首页搜索框*/
 .home-search .search-category {
