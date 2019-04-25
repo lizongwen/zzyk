@@ -969,6 +969,9 @@ input:-ms-input-placeholder {
 .breadcrumb_head, .breadcrumb_content {
 	display: inline-block;
 }
+.breadcrumb-item.active{
+	color:#222;
+}
 
 /* 弹出层样式覆盖 */
 
@@ -976,7 +979,20 @@ input:-ms-input-placeholder {
 	border-radius: 6px!important;
 	overflow: hidden;
 }
-
+/* 表格 */
+.c-table {
+    width: 100%;
+    max-width: 100%;
+    background-color: transparent;
+}
+.c-table td, .c-table th {
+    padding: 10px;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+}
+.c-table-bordered td, .c-table-bordered th {
+    border: 1px solid #dee2e6;
+}
 /*bootstrap样式覆盖*/
 
 .form-group {
