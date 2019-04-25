@@ -363,3 +363,40 @@
 .mkd-jylc {
 	margin: 0 20px;
 }
+.mkd-lx-wp{
+	padding: 50px 0;
+}
+.mkd-lxr{
+	display: inline-block;
+	position: relative
+
+}
+.mkd-lxr-tip{
+	top: -7px;
+    left: 50px;
+	position: absolute;
+	max-width: none;
+}
+.mkd-lxr-num{
+	margin-top: 30px;
+}
+.mkd-lxr-num__qq{
+	background: #2b99f1
+
+}
+.mkd-lxr-num__phone{
+	margin-right:30px;
+	background: #ff6645
+
+}
+.mkd-lxr-num__qq,.mkd-lxr-num__phone{
+	float: left;
+	width:320px;
+	height: 60px;
+	font-size:24px;
+	color:#fff;
+	line-height: 62px;
+}
+.mkd-lxr-num__qq>img,.mkd-lxr-num__phone>img{
+	vertical-align: top
+}
