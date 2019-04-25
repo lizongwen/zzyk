@@ -148,11 +148,11 @@
 	margin: 0 auto 20px;
 }
 
-.market .main-wrap .market-card-wrap>div {
+.market-card-wrap>div {
 	margin: 0 20px 20px 0;
 }
 
-.market .main-wrap .market-card-wrap>div:nth-child(4n) {
+.market-card-wrap>div:nth-child(4n) {
 	margin-right: 0
 }
 
@@ -164,29 +164,29 @@
 	transform: translateY(-15px);
 }
 
-.market .main-wrap .market-card {
+.market-card {
 	border-radius: 4px;
 	background-color: #fff;
 	width: 285px;
 	overflow: hidden;
 }
 
-.market .main-wrap .market-card .market-card-head {
+.market-card .market-card-head {
 	padding: 13px 20px;
 	border-top: 6px solid #128bed;
 	font-size: 18px;
 	font-weight: bold;
 }
 
-.market .main-wrap .market-card .market-card-body {
+.market-card .market-card-body {
 	padding-left: 20px;
 }
 
-.market .main-wrap .market-card .market-card-foot {
+.market-card .market-card-foot {
 	padding: 15px;
 }
 
-.market .main-wrap .market-card .market-card-foot_btn {
+.market-card .market-card-foot_btn {
 	display: block;
 	margin: 5px auto 0;
 	width: 128px;
@@ -195,11 +195,11 @@
 	color: #fff;
 }
 
-.market .main-wrap .market-card .market-price {
+.market-card .market-price {
 	margin-bottom: 10px;
 }
 
-.market .main-wrap .market-card .market-price .priceNum {
+.market-card .market-price .priceNum {
 	font-size: 24px;
 	color: #ff6f00;
 }
