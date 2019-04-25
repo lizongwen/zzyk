@@ -644,12 +644,12 @@ input:-ms-input-placeholder {
 
 /*导航*/
 
-.navbar {
+.c-navbar {
 	height: 88px;
 	background-color: #fff;
 }
 
-.navbar-content {
+.c-navbar-content {
 	width: 1200px;
 	height: 100%;
 	margin: 0 auto;
