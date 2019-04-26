@@ -1,7 +1,9 @@
-首页home.html
-资质出售zzcs.html
-资质出售详情zzcs.detail.html
-技术负责人jsfzr.html
-运营商yys.html
-登录login.html
-注册register.html
+缃戠珯鍥炬爣favicon.ico
+棣栭〉home.html
+璧勮川鍑哄敭zzcs.html
+璧勮川鍑哄敭璇︽儏zzcs.detail.html
+鎶�鏈礋璐ｄ汉jsfzr.html
+鎶�鏈礋璐ｄ汉璇︽儏jsfzr.detail.html
+杩愯惀鍟唝ys.html
+鐧诲綍login.html
+娉ㄥ唽register.html
