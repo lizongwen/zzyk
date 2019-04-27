@@ -13,50 +13,51 @@
 </head>
 
 <body>
-
-	<div class="c-navbar">
-		<div class="c-navbar-content">
-			<div class="site-logo">
-				<img src="../img/logo.jpg" alt="logo">
+	<div id="app">
+		<div class="c-navbar">
+			<div class="c-navbar-content">
+				<div class="site-logo">
+					<img src="../img/logo.jpg" alt="logo">
+				</div>
+				<div class="site-wish">全国首家资质运营服务平台</div>
+				<div class="welcome">欢迎入住</div>
 			</div>
-			<div class="site-wish">全国首家资质运营服务平台</div>
-			<div class="welcome">欢迎入住</div>
 		</div>
-	</div>
-	<div class="main login-div">
-		<div class="login-form-wrap">
-			<div class="form__content">
-				<div class="form-name">用户登录</div>
-				<from class="login-form">
-					<div class="form-group">
-						<input type="text" class="form-control" id="userphone" placeholder="请输入手机号">
-					</div>
-					<div class="form-group">
-						<input type="password" class="form-control" id="password" placeholder="请输入密码">
-						<div class="form-check">
-							<label class="form-check-label">
-								<input class="form-check-input" type="checkbox"> 下次自动登录
-							</label>
-							<a class="forget-password fr" href="javascript:;">忘记密码?</a>
+		<div class="main login-div">
+			<div class="login-form-wrap">
+				<div class="form__content">
+					<div class="form-name">用户登录</div>
+					<from class="login-form">
+						<div class="form-group">
+							<input type="text" class="form-control" id="userphone" placeholder="请输入手机号">
 						</div>
-					</div>
+						<div class="form-group">
+							<input type="password" class="form-control" id="password" placeholder="请输入密码">
+							<div class="form-check">
+								<label class="form-check-label">
+									<input class="form-check-input" type="checkbox"> 下次自动登录
+								</label>
+								<a class="forget-password fr" href="javascript:;">忘记密码?</a>
+							</div>
+						</div>
 
-					<button type="submit" class="btn btn-primary btn-block btn-lg">登录</button>
-					<a class="login-register" href="javascript:;" @click="showRegister">免费注册>></a>
-					<div class="login-error" v-show="error"><span class="error-text"><img src="../img/login-error.png">
-							您的用户名或密码错误</span></div>
-				</from>
+						<button type="submit" class="btn btn-primary btn-block btn-lg">登录</button>
+						<a class="login-register" href="javascript:;" @click="showRegister">免费注册>></a>
+						<div class="login-error" v-show="error"><span class="error-text"><img
+									src="../img/login-error.png">
+								您的用户名或密码错误</span></div>
+					</from>
+				</div>
+			</div>
+		</div>
+		<div class="site-footer">
+			<div class="site-copy-wrap">
+				<div>免责声明</div>
+				<div>Copyright 2018-2026 资质云库 皖ICP备14055920号</div>
+				<div>本站是一个信息交互平台,用户所发布信息与本站无关!请勿发布违法信息！</div>
 			</div>
 		</div>
 	</div>
-	<div class="site-footer">
-		<div class="site-copy-wrap">
-			<div>免责声明</div>
-			<div>Copyright 2018-2026 资质云库 皖ICP备14055920号</div>
-			<div>本站是一个信息交互平台,用户所发布信息与本站无关!请勿发布违法信息！</div>
-		</div>
-	</div>
-
 
 
 	<script src="../js/libs/jquery-1.11.3.min.js"></script>
