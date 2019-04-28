@@ -9,6 +9,7 @@
 }
 .main{
 	height: calc(100% - 203px);
+	min-height: 549px;
 }
 .login-div{
 	position: relative;
@@ -20,7 +21,7 @@
 	position: absolute;
 	width: 528px;
 	height:450px;
-	margin-top:-250px;
+	transform: translateY(-50%);
 	top:50%;
 	right:20%;
 	padding:8px;
@@ -95,7 +96,7 @@
 .register-div{
 	position: relative;
 	background: url('../img/register-bg.jpg') no-repeat center;
-	/* overflow: hidden; */
+	overflow: hidden;
 }
 .register-form{
 	display: block;
@@ -114,8 +115,7 @@
 	height:538px;
 	left:50%;
 	top:50%;
-	margin-top:-300px;
-	margin-left:-300px;
+	transform: translate(-50%,-50%);
 	border-radius: 5px;
 	overflow: hidden;
 }
@@ -154,34 +154,4 @@
 .agreement{
 	color:#128bed;
 	cursor: pointer;
-}
-
-@media screen and (max-width:1400px){
-	.login-form-wrap {
-		margin-top:-200px;
-		width: 440px;
-		height: 400px;
-	}
-	.register-form-wrap{
-		width:450px;
-		height:404px ;
-		margin-top:-204px;
-		margin-left:-225px;
-	}
-	.register-form-wrap .form__content{
-		padding:0
-	}
-	.register-form{
-		margin:  0 60px
-	}
-	.register-form-wrap .form-name{
-		margin-bottom:15px;
-		padding-bottom:12px;
-	}
-	.register-form .submit{
-		margin-top:5px;
-	}
-	.register-form .form-group:nth-last-of-type(2){
-		margin-bottom: 10px
-	}
 }

@@ -112,17 +112,17 @@
 	height: 290px;
 	background-color: #fff;
 	opacity: 0;
-	transform: translateX(-1000px)
+	transform: translate3d(-1108px,0,0)
 }
 .ab-bs-intro.active,.ab-bs-r.active,.ab-bs-bus.active{
-	transition: all 0.5s;
+	transition: all 0.5s 0.8s;
 	opacity: 1;
-	transform: translateX(0)
+	transform: translate3d(0,0,0)
 }
 .ab-bs-r{
 	float: right;
 	opacity: 0;
-	transform: translateX(1000px)
+	transform: translate3d(812px,0,0)
 }
 .ab-bs-intro{
 	padding:39px 30px;
@@ -141,7 +141,7 @@
 	padding:30px 30px;
 	background-color: #fafafa;
 	opacity: 0;
-	transform: translateX(-1000px)
+	transform: translate3d(-1108px,0,0)
 }
 .ab-bs-bus-bd{
 	margin-top:19px;
@@ -167,8 +167,15 @@
 }
 .ab-avg-cont{
 	padding-left:390px;
-	height: 200px;
+	height: 220px;
+	opacity: 0;
+	transform: translate3d(0,300px,0);
 	background: url('../img/about-avg-lg.png') no-repeat left center;
+}
+.ab-avg-cont.active{
+	transition: all 1s 0.8s;
+	opacity: 1;
+	transform: translate3d(0,0,0)
 }
 .ab-avg-bd{
 	margin-top:60px;
@@ -187,11 +194,20 @@
 	width: 787px;
 	padding:39px 30px;
 	float:left;
+	opacity: 0;
+	transform: translate3d(-1138px,0,0)
+}
+.ab-pf-intro.active,.ab-pf__lg.active{
+	transition: all 1s 1s;
+	opacity: 1;
+	transform: translate3d(0,0,0);
 }
 .ab-bs-pf-bd{
 	margin-top: 22px;
 }
 .ab-pf__lg{
+	opacity: 0;
+	transform: translate3d(1138px,0,0);
 	float: right;
 }
 .ab-bs-pf__text{

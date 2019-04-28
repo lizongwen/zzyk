@@ -1,4 +1,4 @@
-网站图标favicon.ico
+﻿网站图标favicon.ico
 首页home.html
 资质出售zzcs.html
 资质出售详情zzcs.detail.html
@@ -7,3 +7,4 @@
 运营商yys.html
 登录login.html
 注册register.html
+关于我们about/home.html

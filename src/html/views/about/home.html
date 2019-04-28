@@ -170,12 +170,17 @@
 		$(function () {
 			var index = {
 				initPage: function () {
+					
 					this.bandEvent();
 				},
 				//绑定事件
 				bandEvent: function () {
 					navHover();
-					pageScroll();
+					window.onload = function () {
+						document.body.scrollTop = 0
+						pageScroll();
+					}
+
 				}
 
 			}
@@ -194,15 +199,21 @@
 			function pageScroll() {
 				PageContentHeight = document.getElementById('app').clientHeight;
 				htmlHeight = document.body.clientHeight;
-				finalPx = PageContentHeight - htmlHeight;
-				utils.handleScrollHeader(resp => {
-					if(resp.currentTop>125){
-						$(".ab-bs-intro").addClass('active')
-						$(".ab-bs-r").addClass('active')
-						$(".ab-bs-bus").addClass('active')
-					}
-					
-				});
+				finalPx1 = PageContentHeight - htmlHeight - 1350;
+				finalPx2 = PageContentHeight - htmlHeight - 800;
+				$(".ab-bs-intro").addClass('active')
+				$(".ab-bs-r").addClass('active')
+				$(".ab-bs-bus").addClass('active')
+				utils.handleScrollHeader(pageScrollHander);
+				
+			}
+			function pageScrollHander(resp) {
+				if (resp.currentTop > finalPx1) {
+					$(".ab-avg-cont").addClass('active')
+				}
+				if (resp.currentTop > finalPx2) {
+					$(".ab-pf-intro,.ab-pf__lg").addClass('active');
+				}
 			}
 			index.initPage()
 		})
