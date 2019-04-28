@@ -18,6 +18,15 @@
 	float: left;
 	margin-top:17px;
 }
+.ad-guide__btn{
+	float:right;
+	width: 97px;
+	height:24px;
+	margin-top:30px;
+	border:1px solid #fff;
+	border-radius: 12px;
+	color:#fff;
+}
 .ab-navbar{
 	position: relative;
 	float: left;
@@ -192,7 +201,7 @@
 }
 .ab-pf-intro{
 	width: 787px;
-	padding:39px 30px;
+	padding:39px 70px 0 30px;
 	float:left;
 	opacity: 0;
 	transform: translate3d(-1138px,0,0)
@@ -222,6 +231,13 @@
 .ab-news-wp{
 	overflow: hidden;
 	margin-top:22px;
+}
+.ab-news__morebtn{
+	float: right;
+	width:80px;
+	height:26px;
+	border:1px solid #c5c5c5;
+	border-radius: 12px;
 }
 .ab-news-item{
 	width: 50%;

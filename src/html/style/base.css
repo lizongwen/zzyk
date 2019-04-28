@@ -340,7 +340,12 @@ mark {
 .pull-right, .fr {
 	float: right !important;
 }
-
+/* 省略 */
+.ellipsis{
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
 /* 清浮动 */
 
 .clearfix:before, .clearfix:after {
