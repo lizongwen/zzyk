@@ -73,7 +73,7 @@
 }
 .gdb-pt,.gdb-xt{
 	width: 1200px;
-	margin: 0 auto;
+	margin: 30px auto;
 }
 .gdb-pt-wp,.gdb-xt-wp{
 	padding:0 5px;
@@ -108,7 +108,7 @@
 }
 .gdb-news {
 	width: 1200px;
-	margin: 0 auto 30px;
+	margin: 14px auto 30px;
 }
 
 .gdb-news__morebtn{
