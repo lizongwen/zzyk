@@ -858,17 +858,17 @@ input:-ms-input-placeholder {
 	padding: 10px;
 	text-align: right;
 }
-.operator-card:nth-of-type(1n) .operator-assess{
-	background: url('../../img/operator_top1.jpg') no-repeat;
+.operator-card:nth-of-type(4n+1) .operator-assess{
+	background: url('../img/operator_top1.jpg') no-repeat;
 }
-.operator-card:nth-of-type(2n) .operator-assess{
-	background: url('../../img/operator_top2.jpg') no-repeat;
+.operator-card:nth-of-type(4n+2) .operator-assess{
+	background: url('../img/operator_top2.jpg') no-repeat;
 }
-.operator-card:nth-of-type(3n) .operator-assess{
-	background: url('../../img/operator_top3.jpg') no-repeat;
+.operator-card:nth-of-type(4n+3) .operator-assess{
+	background: url('../img/operator_top3.jpg') no-repeat;
 }
-.operator-card:nth-of-type(4n) .operator-assess{
-	background: url('../../img/operator_top4.jpg') no-repeat;
+.operator-card:nth-of-type(4n+4) .operator-assess{
+	background: url('../img/operator_top4.jpg') no-repeat;
 }
 
 .operator-card .operator-count {
@@ -920,6 +920,79 @@ input:-ms-input-placeholder {
 	border: 1px solid #999;
 	border-radius: 8px;
 	color: #999;
+}
+
+/*客服卡片*/
+.kefu-card {
+	position: relative;
+	float: left;
+	width: 285px;
+	height: 253px;
+	margin-right: calc((100% - 1140px) / 3);
+	border-radius: 4px;
+	overflow: hidden;
+}
+
+.kefu-card:last-child {
+	margin-right: 0;
+}
+
+.kefu-card .kefu-assess {
+	height: 77px;
+	padding: 10px;
+	text-align: right;
+}
+.kefu-card  .kefu-assess-content{
+	display: inline-block;
+	margin-top: 38px;
+}
+.kefu-card:nth-of-type(4n+1) .kefu-assess{
+	background: url('../img/kefu_top1.jpg') no-repeat;
+}
+.kefu-card:nth-of-type(4n+2) .kefu-assess{
+	background: url('../img/kefu_top2.jpg') no-repeat;
+}
+.kefu-card:nth-of-type(4n+3) .kefu-assess{
+	background: url('../img/kefu_top3.jpg') no-repeat;
+}
+.kefu-card:nth-of-type(4n+4) .kefu-assess{
+	background: url('../img/kefu_top4.jpg') no-repeat;
+}
+
+.kefu-card .kefu__level{
+	margin-left: 3px;
+	font-size:12px;
+	color:#fff;
+}
+
+.kefu-card .kefu-logo {
+	position: absolute;
+	top: 40px;
+	left: 24px;
+}
+
+.kefu-card .kefu-info {
+	height: calc(100% - 77px);
+	padding: 44px 0 0 23px;
+	background-color: #fff;
+}
+
+.kefu-card .kefu-name {
+	font-size: 18px;
+}
+
+.kefu-card .kefu-customer-name {
+	margin-top: 8px;
+	font-size: 12px;
+}
+
+.kefu-card .kefu-btn {
+	width: 120px;
+	height: 32px;
+	margin: 28px 0 0 56px;
+	border-radius: 4px;
+	border: 1px solid #128bed;
+	color: #128bed;
 }
 
 /* 广告栏 */

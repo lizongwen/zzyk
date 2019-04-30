@@ -246,7 +246,12 @@
   padding-top: 24px;
   overflow: hidden;
 }
-
+.home .home-content .kefu {
+	width: 1200px;
+	margin: 0 auto;
+	padding-top: 24px;
+	overflow: hidden;
+  }
 
 /* 首页搜索框*/
 .home-search .search-category {
