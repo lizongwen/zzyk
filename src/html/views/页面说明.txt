@@ -9,3 +9,6 @@
 注册register.html
 关于我们about/home.html
 资质导航zzdh.html
+资质云平台登录login2.html
+联系我们about/contact.html
+商务合作about/together.html

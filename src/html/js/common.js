@@ -31,24 +31,26 @@ $(function () {
 			$(this).parents('#adBanner').remove()
 		})
 		$("#login").on('click', function () {
-			layer.open({
-				title: false,
-				area: ['495px','439px'],
-				skin:'login-dialog',
-				closeBtn:0,
-				type: 2,
-				content: 'login.html'
-			});
+			location.href='login.html'
+			// layer.open({
+			// 	title: false,
+			// 	area: ['495px','439px'],
+			// 	skin:'login-dialog',
+			// 	closeBtn:0,
+			// 	type: 2,
+			// 	content: 'login.html'
+			// });
 		});
 		$("#register").on('click', function () {
-			layer.open({
-				title: false,
-				area: ['495px','550px'],
-				skin:'register-dialog',
-				closeBtn:0,
-				type: 2,
-				content: 'register.html'
-			});
+			location.href='register.html'
+			// layer.open({
+			// 	title: false,
+			// 	area: ['495px','550px'],
+			// 	skin:'register-dialog',
+			// 	closeBtn:0,
+			// 	type: 2,
+			// 	content: 'register.html'
+			// });
 		})
 	};
 })

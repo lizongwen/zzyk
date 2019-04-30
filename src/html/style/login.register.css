@@ -16,6 +16,10 @@
 	background: url('../img/login-bg.jpg') no-repeat center;
 	/* overflow: hidden; */
 }
+.login2-div{
+	position: relative;
+	background: url('../img/login2-bg.jpg') no-repeat center;
+}
 
 .login-form-wrap{
 	position: absolute;
@@ -68,13 +72,6 @@
 	color:#128bed
 }
 
-.form-control:focus {
-    color: #495057;
-    background-color: #fff;
-    border-color: #80bdff;
-    outline: 0;
-    box-shadow: 0 0 5px rgb(184,227,255);
-}
 .form-check{
 	margin-top:7px;
 	line-height: 24px;

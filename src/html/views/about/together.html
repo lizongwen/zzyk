@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="icon" href="../favicon.ico">
+	<title>商务合作 - 资质云库</title>
+	<link rel="stylesheet" href="../../js/libs/bootstrap4/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../../style/base.css">
+	<link rel="stylesheet" href="../../style/about.css">
+</head>
+
+<body>
+	<div id="app">
+		<div class="about">
+			<div class="ab-hd">
+				<div class="ab-nav">
+					<img class="ab-logo" src="../../img/logo2.png" alt="logo">
+					<div class="ab-navbar">
+						<span class="ab-nb--cur j-ab-nb--cur clearfix" style="left:172px"></span>
+						<div class="ab-nb__em j-ab-nb__em">
+							<a href="http://">关于我们</a>
+						</div>
+						<div class="ab-nb__em j-ab-nb__em ab-nb__em--active">
+							<a href="http://">商务合作</a>
+						</div>
+						<div class="ab-nb__em j-ab-nb__em">
+							<a href="http://">联系我们</a>
+						</div>
+					</div>
+					<button id="adGuideBtn" class="ad-guide__btn" type="button">网站导航</button>
+					<ul id="adGuideDownmenu" class="ad-guide-downmenu" style="display: none">
+						<li>
+							<a href="">网站首页</a>
+						</li>
+						<li>
+							<a href="">资质出售</a>
+						</li>
+						<li>
+							<a href="">资质求购</a>
+						</li>
+						<li>
+							<a href="">资质导航</a>
+						</li>
+						<li>
+							<a href="">资质云平台</a>
+						</li>
+						<li>
+							<a href="">关于我们</a>
+						</li>
+					</ul>
+				</div>
+				<div class="ad-hd-text">
+					<div class="ad-hd-text_a">资质云库&nbsp;&nbsp;&nbsp;&nbsp;用心服务</div>
+					<img class="ad-hd-text_b" src="../../img/about-hd-textimg.png" alt="" srcset="">
+				</div>
+			</div>
+			<div class="ab-bd">
+				<div class="ab-together">
+					<div class="ab-tg-l">
+						<div class="form-head__title">请详细填写以下相关详细，我们将会尽快给您回复：</div>
+						<form class="ab-tg-form form-horizontal">
+							<div class="form-group row">
+								<label for="firstname" class="col-sm-3 control-label require">联系人：</label>
+								<div class="col-sm-9">
+									<input type="text" class="form-control" id="userphone" placeholder="联系人">
+								</div>
+							</div>
+							<div class="form-group row">
+								<label for="firstname" class="col-sm-3 control-label require">联系方式：</label>
+								<div class="col-sm-9">
+									<input type="text" class="form-control" id="userphone" placeholder="联系方式">
+								</div>
+							</div>
+							<div class="form-group row">
+								<label for="firstname" class="col-sm-3 control-label require">Email地址：</label>
+								<div class="col-sm-9">
+									<input type="text" class="form-control" id="userphone" placeholder="Email地址">
+								</div>
+							</div>
+							<div class="form-group row">
+								<label for="firstname" class="col-sm-3 control-label">公司名称：</label>
+								<div class="col-sm-9">
+									<input type="text" class="form-control" id="userphone" placeholder="公司名称">
+								</div>
+							</div>
+							<div class="form-group row">
+								<label for="firstname" class="col-sm-3 control-label">公司网址：</label>
+								<div class="col-sm-9">
+									<input type="text" class="form-control" id="userphone" placeholder="公司网址">
+								</div>
+							</div>
+							<div class="form-group row">
+								<label for="firstname" class="col-sm-3 control-label require">合作内容：</label>
+								<div class="col-sm-9">
+									<textarea name="" id="" cols="30" rows="6" class="form-control" 
+										placeholder="合作内容" style="resize:none"></textarea>
+								</div>
+							</div>
+							<div class="form-group row">
+								<label for="firstname" class="col-sm-3 control-label require">验证码：</label>
+								<div class="col-sm-7">
+									<input type="text" class="form-control" id="userphone" placeholder="验证码">
+								</div>
+								<div class="col-sm-2">
+									<img class="ab-yzm" id="yzm" src="../../img/yzm.png">
+								</div>
+							</div>
+							<div class="form-group row">
+								<div class="col-sm-7 offset-sm-3">
+									<button type="button" class="btn btn-primary btn-block">确认提交</button>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="ab-tg-r">
+						<img src="../../img/ab-together.png">
+						<img class="ab-tg__pt" src="../../img/ab-tg-pt.png" alt="" srcset="">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="site-footer">
+			<div class="site-copy-wrap">
+				<div>免责声明</div>
+				<div>Copyright 2018-2026 资质云库 皖ICP备14055920号</div>
+				<div>本站是一个信息交互平台,用户所发布信息与本站无关!请勿发布违法信息！</div>
+			</div>
+		</div>
+	</div>
+	<script src="../../js/libs/jquery-1.11.3.min.js"></script>
+	<script src="../../js/utils.js"></script>
+	<script>
+		$(function () {
+			var index = {
+				initPage: function () {
+					this.bandEvent();
+				},
+				//绑定事件
+				bandEvent: function () {
+					$("#adGuideBtn").on('mouseenter', function () {
+						$("#adGuideDownmenu").slideDown();
+					})
+						.on('mouseleave', function (e) {
+							$("#adGuideDownmenu").slideUp('fast');
+						});
+					$("#adGuideDownmenu").on('mouseenter', function () {
+						$(this).stop().show();
+					}).on('mouseleave', function (e) {
+						$(this).hide();
+					})
+
+					//刷新验证码
+					$("#yzm").on('click', function () {
+						alert('新验证码地址')
+						$(this).attr('src', '具体验证码url获取路径?s' + new Date().getTime())
+					})
+					navHover();
+				}
+			}
+			function navHover() {
+				var line_reset = $(".ab-nb__em--active");
+				$(".j-ab-nb--cur").css('width', line_reset.width())
+				$(".j-ab-nb__em").mouseenter(function () {
+					$(".j-ab-nb--cur").stop();
+					$(".j-ab-nb--cur").animate({ left: $(this).position().left + 36 + 'px', width: $(this).width() + 'px' }, 350);
+				});
+				$(".j-ab-nb__em").mouseleave(function () {
+					$(".j-ab-nb--cur").stop();
+					$(".j-ab-nb--cur").animate({ left: line_reset.position().left + 36 + 'px', width: line_reset.width() + 'px' }, 250);
+				});
+			}
+			index.initPage()
+		})
+	</script>
+</body>
+
+</html>
