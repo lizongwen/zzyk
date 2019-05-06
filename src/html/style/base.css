@@ -923,78 +923,45 @@ input:-ms-input-placeholder {
 }
 
 /*客服卡片*/
+
 .kefu-card {
 	position: relative;
 	float: left;
-	width: 285px;
-	height: 253px;
-	margin-right: calc((100% - 1140px) / 3);
+	width: 291px;
+	height: 140px;
+	margin: 0 12px 12px 0;
 	border-radius: 4px;
 	overflow: hidden;
+	background: #fff;
 }
-
-.kefu-card:last-child {
+.kefu-card:nth-child(4n){
 	margin-right: 0;
 }
-
-.kefu-card .kefu-assess {
-	height: 77px;
-	padding: 10px;
-	text-align: right;
+.kefu-logo{
+	margin: 27px 27px 0 20px;
+	float: left;
 }
-.kefu-card  .kefu-assess-content{
-	display: inline-block;
-	margin-top: 38px;
+.kefu-info{
+	float: left;
+	margin-top: 25px;
 }
-.kefu-card:nth-of-type(4n+1) .kefu-assess{
-	background: url('../img/kefu_top1.jpg') no-repeat;
+.kefu-name{
+	font-size:18px;
 }
-.kefu-card:nth-of-type(4n+2) .kefu-assess{
-	background: url('../img/kefu_top2.jpg') no-repeat;
+.kefu-medal{
+	margin-left: 8px;
+	vertical-align: text-bottom;
 }
-.kefu-card:nth-of-type(4n+3) .kefu-assess{
-	background: url('../img/kefu_top3.jpg') no-repeat;
+.kefu-customer-name{
+	margin: 5px 0 10px;
 }
-.kefu-card:nth-of-type(4n+4) .kefu-assess{
-	background: url('../img/kefu_top4.jpg') no-repeat;
-}
-
-.kefu-card .kefu__level{
-	margin-left: 3px;
-	font-size:12px;
+.kefu-btn{
+	width: 120px;
+	height: 25px;
+	border-radius: 0;
+	background: linear-gradient(to right,#f07f4d,#f76a7b);
 	color:#fff;
 }
-
-.kefu-card .kefu-logo {
-	position: absolute;
-	top: 40px;
-	left: 24px;
-}
-
-.kefu-card .kefu-info {
-	height: calc(100% - 77px);
-	padding: 44px 0 0 23px;
-	background-color: #fff;
-}
-
-.kefu-card .kefu-name {
-	font-size: 18px;
-}
-
-.kefu-card .kefu-customer-name {
-	margin-top: 8px;
-	font-size: 12px;
-}
-
-.kefu-card .kefu-btn {
-	width: 120px;
-	height: 32px;
-	margin: 28px 0 0 56px;
-	border-radius: 4px;
-	border: 1px solid #128bed;
-	color: #128bed;
-}
-
 /* 广告栏 */
 
 .ad-banner {
