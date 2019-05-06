@@ -12,9 +12,11 @@ div.zxf_pagediv a {
 	box-sizing: border-box;
 	text-align: center;
 }
-.zxf_pagediv span{
+
+.zxf_pagediv span {
 	margin: 0 4px;
 }
+
 .current {
 	color: #ffffff;
 	background: #128bed;
@@ -34,9 +36,11 @@ div.zxf_pagediv a {
 	border-radius: 3px;
 	text-align: center
 }
-.zxfPagenum:hover{
-	color:#128bed
+
+.zxfPagenum:hover {
+	color: #128bed
 }
+
 .nextpage {
 	margin: 0 4px;
 }
@@ -49,26 +53,31 @@ div.zxf_pagediv a {
 	line-height: 32px;
 	border-radius: 3px;
 }
-.nextbtn, .prebtn{
+
+.nextbtn, .prebtn {
 	margin: 0 4px;
 }
-.prebtn,span.disabled:first-child{
+
+.prebtn, span.disabled:first-child {
 	margin-left: 0;
 }
+
 .zxfinput {
 	width: 80px;
 	height: 32px;
 	text-align: center;
 	box-sizing: border-box;
-	border:none;
+	border: none;
 	font-size: 12px;
 	border-radius: 3px;
 	text-align: center;
 	color: #666;
 }
-.zxfinput:focus{
+
+.zxfinput:focus {
 	outline: none;
 }
+
 span.zxfokbtn {
 	width: 48px;
 	height: 32px;
@@ -78,6 +87,13 @@ span.zxfokbtn {
 	border-radius: 3px;
 	font-size: 12px;
 	background: #128bed;
-	color:#fff;
+	color: #fff;
 }
 
+.zxf_pagediv_border .zxfPagenum, .zxf_pagediv_border span:not(.zxfellipsis), .zxf_pagediv_border .prebtn {
+	border: 1px solid #e6e6e6;
+}
+
+.zxf_pagediv_border span.current, .zxf_pagediv_border span.zxfokbtn {
+	border-color: #128bed
+}

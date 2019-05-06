@@ -1100,3 +1100,7 @@ input:-ms-input-placeholder {
 .btn-primary{
 	background-color: #128bed
 }
+/* tab */
+.c-tabs-wp{
+	background: #fff;
+}
