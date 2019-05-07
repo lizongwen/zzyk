@@ -14,3 +14,5 @@
 商务合作about/together.html
 新闻中心news.html
 新闻详情detail.news.html
+资质求购zzqg.html
+资质求购详情zzqg.detail.html

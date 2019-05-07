@@ -1071,3 +1071,50 @@ input:-ms-input-placeholder {
 .c-tabs-wp{
 	background: #fff;
 }
+/* market-list-card */
+.c-mkt-list-card{
+	margin-bottom: 10px;
+	border-left:6px solid #128bed;
+	border-radius: 4px;
+	background: #fff;
+}
+.c-mkt-list-card-l{
+	padding:21px 33px 22px;
+	/* padding-left:33px; */
+	overflow: hidden;
+}
+.c-mkt-list-card__title{
+	display: inline-block;
+	margin-bottom:8px;
+	font-size:18px;
+	font-weight: bold;
+	color:#222;
+	cursor: pointer;
+}
+.c-mkt-list-card__title:hover{
+	color:#128bed
+}
+.c-mkt-list-card__table{
+	margin-left: 20px;
+}
+.c-mkt-list-card__table td{
+	padding:3px
+}
+.c-mkt-list-card-r{
+	float: right;
+	width: 180px;
+	padding-top:50px;
+	padding-right:38px;
+	text-align: right;
+}
+.c-mkt-list-card__price{
+	font-size:24px;
+	color:#ff6f00
+}
+.c-mkt-list-card__btn{
+	width:128px;
+	height:36px;
+	margin-top: 14px;
+	color:#fff;
+	background: #128bed;
+}

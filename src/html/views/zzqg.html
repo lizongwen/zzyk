@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="icon" href="favicon.ico">
+	<title>资质求购 - 资质云库 - 全国首家资质运营服务平台</title>
+	<link rel="stylesheet" href="../js/libs/bootstrap4/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../js/libs/page/jquery.pagination.css">
+	<link rel="stylesheet" href="../style/base.css">
+	<link rel="stylesheet" href="../style/market.css">
+</head>
+
+<body>
+	<div id="app">
+		<div class="site-baseview" ref="siteBase">
+			<!-- 站点顶部 -->
+			<div class="site-top">
+				<div class="site-top-nav">
+					<div class="site-top-left">
+						<img class="gg-icon" src="../img/gg.png">热门资讯：资质云库V1.0版本正式上线，资质运营，从未如此性感！
+					</div>
+					<div class="site-top-right">
+						<div class="site-entry">
+							<a href="javascript:;" id="login">登录</a>
+							<a href="javascript:;" id="register">注册</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- /站点顶部 -->
+			<!-- 顶部导航 -->
+			<div class="c-navbar">
+				<div class="c-navbar-content">
+					<div class="site-logo">
+						<img src="../img/logo.jpg" alt="logo">
+					</div>
+					<div class="site-wish">全国首家资质运营服务平台</div>
+					<ul class="site-nav">
+						<li class="site-nav__li">
+							<a href="home.html">首页</a>
+						</li>
+						<li class="site-nav__li site-nav__li--active">
+							<a href="zzcs.html">交易市场</a>
+						</li>
+						<li class="site-nav__li">
+							<a href="javascript:;">资质运营服务</a>
+						</li>
+						<li class="site-nav__li">
+							<a href="javascript:;">建筑资质云平台</a>
+						</li>
+						<li class="site-nav__li">
+							<a href="javascript:;">资质计算器</a>
+						</li>
+						<li class="site-nav__li">
+							<a href="javascript:;">资质导航</a>
+						</li>
+						<li class="site-nav__li">
+							<a href="javascript:;">关于我们</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- /顶部导航 -->
+			<div class="main-page market">
+				<div class="breadcrumb-wrap">
+					<span class="breadcrumb_head">当前位置：</span>
+					<div class="breadcrumb_content">
+						<ol class="breadcrumb">
+							<li class="breadcrumb-item">市场交易</li>
+							<li class="breadcrumb-item active">资质求购</li>
+						</ol>
+					</div>
+				</div>
+				<div class="main-head clearfix">
+					<div class="head-l-wrap">
+						<div class="market-search">
+							<div class="market-search-item clearfix">
+								<div class="market-search-l">
+									<span>资质类型</span>
+								</div>
+								<div class="market-search-r">
+									<div class="market-search-r-item" id="zzlx"></div>
+									<button type="button" class="toggle-btn open" style="background-position: 0 0"
+										id="zzlxToggle">收起</button>
+								</div>
+							</div>
+							<div class="market-search-item clearfix">
+								<div class="market-search-l">
+									<span>有效期限</span>
+								</div>
+								<div class="market-search-r">
+									<div class="market-search-r-item" id="effDate"></div>
+									<button type="button" class="toggle-btn" id="effDateToggle">展开</button>
+								</div>
+							</div>
+							<div class="market-search-item clearfix">
+								<div class="market-search-l">
+									<span>省级</span>
+								</div>
+								<div class="market-search-r">
+									<div class="market-search-r-item" id="province"></div>
+									<button type="button" class="toggle-btn" id="provinceToggle">展开</button>
+								</div>
+							</div>
+							<div class="market-search-item clearfix">
+								<div class="market-search-l">
+									<span>城市</span>
+								</div>
+								<div class="market-search-r">
+									<div class="market-search-r-item" id="city"></div>
+									<button type="button" class="toggle-btn" id="cityToggle">展开</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="head-r-wrap" style="background: url('../img/market-zzcs-bg.jpg') no-repeat;">
+						<img src="../img/market-logo.png">
+						<button type="button" class="head-r-wrap__btn">我要求购资质</button>
+						<button type="button" class="head-r-wrap__btn">我要出售资质</button>
+					</div>
+				</div>
+				<div class="search-summary clearfix">
+					<div class="search-summary-l">
+						<div class="search-sort active">综合排序 <img src="../img/sort.png"></div>
+						<div class="search-sort">发布时间</div>
+						<div class="search-sort">价格排序</div>
+					</div>
+					<div class="search-summary-r">
+						共计
+						<span class="search__count">123</span> 条记录
+					</div>
+				</div>
+				<div class="main-body">
+					<div class="market-list-card-wrap clearfix" id="marketCard"></div>
+					<div id="pagination" class="zxf_pagediv"></div>
+				</div>
+			</div>
+			<div class="footer-line"></div>
+			<div class="site-footer">
+				<div class="site-footer-wrap">
+					<div class="site-footer-info">
+						<div class="site-footer-l-info">
+							<div class="site-footer-l-kf">
+								<div class="tel">
+									客服支持
+									<p>000-00000000</p>
+								</div>
+								<div class="qq">
+									在线咨询
+									<p>09:00—17:50</p>
+								</div>
+							</div>
+							<div class="site-footer-l-qrcode">
+								<img src="../img/qrcode.png">
+								<p>微信公众号</p>
+							</div>
+						</div>
+						<div class="site-footer-r-info">
+							<dl>
+								<dt>资质服务运营</dt>
+								<dd>
+									<a href="javascript:;">资质办理</a>
+								</dd>
+								<dd>
+									<a href="javascript:;">人才服务</a>
+								</dd>
+								<dd>
+									<a href="javascript:;">资质转让</a>
+								</dd>
+							</dl>
+							<dl>
+								<dt>平台简介</dt>
+								<dd>
+									<a href="javascript:;">商务合作</a>
+								</dd>
+								<dd>
+									<a href="javascript:;">联系方式</a>
+								</dd>
+								<dd>
+									<a href="javascript:;">关于我们</a>
+								</dd>
+							</dl>
+							<dl>
+								<dt>友情链接</dt>
+								<dd>
+									<a href="javascript:;">安徽省住房和城乡建设厅</a>
+								</dd>
+								<dd>
+									<a href="javascript:;">安徽省建筑市场监管和公共服务平台</a>
+								</dd>
+								<dd>
+									<a href="javascript:;">全国建筑市场监管和公共服务平台</a>
+								</dd>
+							</dl>
+						</div>
+					</div>
+				</div>
+				<div class="site-copy-wrap">
+					<div>免责声明</div>
+					<div>Copyright 2018-2026 资质云库 皖ICP备14055920号</div>
+					<div>本站是一个信息交互平台,用户所发布信息与本站无关!请勿发布违法信息！</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/html" id="marketCardTlp">
+		{{each list as item index}}
+		<div class="c-mkt-list-card clearfix">
+			<div class="c-mkt-list-card-r">
+				<div>价格：<span class="c-mkt-list-card__price">{{item.price}}</span> </div>
+				<button class="c-mkt-list-card__btn">立即沟通</button>
+			</div>
+			<div class="c-mkt-list-card-l">
+				<div class="c-mkt-list-card__title">{{item.dept}}</div>
+				<table class="c-mkt-list-card__table">
+					<tr>
+						<td>分类：</td>
+						<td width="275">{{item.assort}}</td>
+						<td>详细分类：</td>
+						<td width="275">{{item.assortDetail}}</td>
+					</tr>
+					<tr>
+						<td>地区：</td>
+						<td>{{item.area}}</td>
+						<td>发布时间：</td>
+						<td>{{item.date}}</td>
+					</tr>
+					<tr>
+						<td>内容：</td>
+						<td colspan="3">{{item.content}}</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		{{/each}}
+	</script>
+	<script type="text/html" id="marketSearchTlp">
+		{{each list as item index}}
+			{{if index==0}}
+				<span class="market-search-r-item__label market-search-r-item__label--active j-market-search-r-item__label">{{item}}</span>
+			{{else}}
+				<span class="market-search-r-item__label j-market-search-r-item__label">{{item}}</span>
+			{{/if}}
+		{{/each}}
+	</script>
+	<script src="../js/libs/jquery-1.11.3.min.js"></script>
+	<script src="../js/libs/arttemplate/template-web.js"></script>
+	<script src="../js/libs/page/jquery.pagination.js"></script>
+	<script src="../js/common.js"></script>
+	<script src="../js/utils.js"></script>
+	<script>
+		$(function () {
+			zzlx = [
+				"不限",
+				"施工总承包资质",
+				"施工专业承包资质",
+				"施工劳务资质",
+				"承装类承装资质",
+				"设计资质",
+				"房地产资质",
+				"其他"
+			],
+				effDate = ["不限", 2026, 2025, 2024, 2023, 2022, 2021, 2020, 2019],
+				province = [
+					"不限",
+					"安徽",
+					"河北",
+					"贵州",
+					"重庆",
+					"四川",
+					"云南",
+					"湖北",
+					"湖南",
+					"江苏",
+					"浙江",
+					"福建",
+					"江西",
+					"广州",
+					"河南"
+				],
+				city = [
+					"不限",
+					"合肥",
+					"安庆",
+					"滁州",
+					"芜湖",
+					"铜陵",
+					"马鞍山",
+					"宣城",
+					"黄山"
+				];
+			var index = {
+				initPage: function () {
+					this.initMarketCardData();
+					this.initSerchItem();
+					this.bandEvent();
+					this.initPagination();
+				},
+				initPagination() {
+					$("#pagination").createPage({
+						pageNum: 20,
+						current: 0,
+						backfun: function (e) {
+							console.log(e);//回调
+						}
+					});
+
+				},
+				initMarketCardData() {
+					var marketData = [
+						{
+							dept: "淮北市政三级+安许",
+							assort: '工程监理',
+							assortDetail: '工程监理',
+							area: "淮北市",
+							price: 80,
+							content: "诚心转让，需要联系",
+							date: "2019-02-18 12:30:12"
+						},
+						{
+							dept: "淮北市政三级+安许",
+							assort: '工程监理',
+							assortDetail: '工程监理',
+							area: "淮北市",
+							price: 80,
+							content: "诚心转让，需要联系",
+							date: "2019-02-18 12:30:12"
+						},
+						{
+							dept: "淮北市政三级+安许",
+							assort: '工程监理',
+							assortDetail: '工程监理',
+							area: "淮北市",
+							price: 80,
+							content: "诚心转让，需要联系",
+							date: "2019-02-18 12:30:12"
+						},
+						{
+							dept: "淮北市政三级+安许",
+							assort: '工程监理',
+							assortDetail: '工程监理',
+							area: "淮北市",
+							price: 80,
+							content: "诚心转让，需要联系",
+							date: "2019-02-18 12:30:12"
+						},{
+							dept: "淮北市政三级+安许",
+							assort: '工程监理',
+							assortDetail: '工程监理',
+							area: "淮北市",
+							price: 80,
+							content: "诚心转让，需要联系",
+							date: "2019-02-18 12:30:12"
+						}
+
+					], _html;
+					_html = template('marketCardTlp', { list: marketData });
+					$("#marketCard").html(_html);
+				},
+				initSerchItem() {
+					var _html;
+					_html = template('marketSearchTlp', { list: zzlx });
+					$("#zzlx").html(_html);
+					_html = template('marketSearchTlp', { list: effDate.slice(0, 5) });
+					$("#effDate").html(_html);
+					_html = template('marketSearchTlp', { list: province.slice(0, 5) });
+					$("#province").html(_html);
+					_html = template('marketSearchTlp', { list: city.slice(0, 5) });
+					$("#city").html(_html);
+				},
+				bandEvent: function () {
+					$("#zzlxToggle").on('click', { data: zzlx, name: 'zzlx' }, this.toggleView);
+					$("#effDateToggle").on('click', { data: effDate, name: 'effDate' }, this.toggleView);
+					$("#provinceToggle").on('click', { data: province, name: 'province' }, this.toggleView);
+					$("#cityToggle").on('click', { data: city, name: 'city' }, this.toggleView);
+					$("#zzlx,#effDate,#province,#city").on('click', '.j-market-search-r-item__label', function (e) {
+						$(this).addClass('market-search-r-item__label--active').siblings().removeClass('market-search-r-item__label--active')
+					})
+				},
+				toggleView: function (e) {
+					var self = $(this), text = self.text(), data = e.data.data, name = e.data.name, _html;
+					$(this).toggleClass('open');
+					if (text == '展开') {
+						self.text('收起')
+						_html = template('marketSearchTlp', { list: data });
+						$("#" + name).html(_html);
+					} else {
+						self.text('展开');
+						_html = template('marketSearchTlp', { list: data.slice(0, 5) });
+						$("#" + name).html(_html);
+					}
+				}
+			}
+			index.initPage()
+		})
+	</script>
+</body>
+
+</html>

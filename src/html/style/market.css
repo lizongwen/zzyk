@@ -400,3 +400,7 @@
 .mkd-lxr-num__qq>img,.mkd-lxr-num__phone>img{
 	vertical-align: top
 }
+.mkd-zzqg{
+	background: #f5f5f5 url('../img/mkd-qg-bg.jpg') no-repeat top center;
+	background-size: 100%
+}
