@@ -257,9 +257,9 @@
 	<script type="text/html" id="marketSearchTlp">
 		{{each list as item index}}
 			{{if index==0}}
-				<span class="market-search-r-item__label market-search-r-item__label--active j-market-search-r-item__label">{{item}}</span>
+				<span class="market-search-r-item__label market-search-r-item__label--active j-market-search-r-item__label"><a href="detail.asp?{{arg}}{{item.id}}">{{item.name}}</a></span>
 			{{else}}
-				<span class="market-search-r-item__label j-market-search-r-item__label">{{item}}</span>
+				<span class="market-search-r-item__label j-market-search-r-item__label"><a href="detail.asp?{{arg}}={{item.id}}">{{item.name}}</a></span>
 			{{/if}}
 		{{/each}}
 	</script>
@@ -271,43 +271,52 @@
 	<script>
 		$(function () {
 			zzlx = [
-				"不限",
-				"施工总承包资质",
-				"施工专业承包资质",
-				"施工劳务资质",
-				"承装类承装资质",
-				"设计资质",
-				"房地产资质",
-				"其他"
+				{ name: "不限", id: "" },
+				{ name: "施工总承包资质", id: "1" },
+				{ name: "施工专业承包资质", id: "2" },
+				{ name: "施工劳务资质", id: "3" },
+				{ name: "承装类承装资质", id: "4" },
+				{ name: "设计资质", id: "5" },
+				{ name: "房地产资质", id: "6" },
+				{ name: "其他", id: "7" },
 			],
-				effDate = ["不限", 2026, 2025, 2024, 2023, 2022, 2021, 2020, 2019],
+				effDate = [
+					{ name: "不限", id: "" },
+					{ name: 2026, id: "1" },
+					{ name: 2025, id: "2" },
+					{ name: 2024, id: "3" },
+					{ name: 2023, id: "4" },
+					{ name: 2022, id: "5" },
+					{ name: 2021, id: "6" },
+					{ name: 2020, id: "7" },
+					{ name: 2019, id: "8" }],
 				province = [
-					"不限",
-					"安徽",
-					"河北",
-					"贵州",
-					"重庆",
-					"四川",
-					"云南",
-					"湖北",
-					"湖南",
-					"江苏",
-					"浙江",
-					"福建",
-					"江西",
-					"广州",
-					"河南"
+					{ name: "不限", id: "" },
+					{ name: "安徽", id: "1" },
+					{ name: "河北", id: "2" },
+					{ name: "贵州", id: "3" },
+					{ name: "重庆", id: "4" },
+					{ name: "四川", id: "5" },
+					{ name: "云南", id: "6" },
+					{ name: "湖北", id: "7" },
+					{ name: "湖南", id: "8" },
+					{ name: "江苏", id: "9" },
+					{ name: "浙江", id: "10" },
+					{ name: "福建", id: "11" },
+					{ name: "江西", id: "12" },
+					{ name: "广州", id: "13" },
+					{ name: "河南", id: "14" }
 				],
 				city = [
-					"不限",
-					"合肥",
-					"安庆",
-					"滁州",
-					"芜湖",
-					"铜陵",
-					"马鞍山",
-					"宣城",
-					"黄山"
+					{ name: "不限", id: '' },
+					{ name: "合肥", id: '1' },
+					{ name: "安庆", id: '2' },
+					{ name: "滁州", id: '3' },
+					{ name: "芜湖", id: '4' },
+					{ name: "铜陵", id: '5' },
+					{ name: "马鞍山", id: '6' },
+					{ name: "宣城", id: '7' },
+					{ name: "黄山", id: '8' }
 				];
 			var index = {
 				initPage: function () {
@@ -425,13 +434,13 @@
 				},
 				initSerchItem() {
 					var _html;
-					_html = template('marketSearchTlp', { list: zzlx });
+					_html = template('marketSearchTlp', { list: zzlx, arg: '' });
 					$("#zzlx").html(_html);
-					_html = template('marketSearchTlp', { list: effDate.slice(0, 5) });
+					_html = template('marketSearchTlp', { list: effDate.slice(0, 5), arg: '' });
 					$("#effDate").html(_html);
-					_html = template('marketSearchTlp', { list: province.slice(0, 5) });
+					_html = template('marketSearchTlp', { list: province.slice(0, 5), arg: 'sheng_id' });
 					$("#province").html(_html);
-					_html = template('marketSearchTlp', { list: city.slice(0, 5) });
+					_html = template('marketSearchTlp', { list: city.slice(0, 5), arg: 'city_id' });
 					$("#city").html(_html);
 				},
 				bandEvent: function () {
