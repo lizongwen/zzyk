@@ -16,3 +16,4 @@
 新闻详情detail.news.html
 资质求购zzqg.html
 资质求购详情zzqg.detail.html
+资质维护zzwh.html
