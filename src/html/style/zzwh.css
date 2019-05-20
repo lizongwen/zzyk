@@ -1,0 +1,174 @@
+#app {
+	position: relative;
+	height: 100%;
+}
+
+.logo {
+	position: absolute;
+	z-index: 2;
+	left: 14.427%;
+	width: 10.677%;
+	margin-top: 20px;
+}
+
+.swiper-container {
+	width: 100%;
+	height: 100%;
+}
+
+.swiper-slide {
+	text-align: center;
+	font-size: 18px;
+	background: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.screen1 {
+	background: url(../img/screen1_bg.jpg) no-repeat center;
+	background-size: cover;
+	flex-direction: column;
+}
+
+.screen1 .img1 {
+	margin-top: 10px;
+	width: 39%;
+}
+
+.screen1 .img2 {
+	margin: 4vh 0;
+	width: 38%;
+}
+
+.screen1 .img3 {
+	width: 44.95%;
+}
+
+.screen2 {
+	background: url(../img/screen2_bg.jpg) no-repeat center;
+	background-size: cover;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.screen2 .img1 {
+	margin-left: 20%;
+	width: 34.01%;
+}
+
+.screen2 .img2 {
+	width: 66.09%;
+	margin: 0 auto;
+}
+
+.screen3 {
+	position: relative;
+	background: url(../img/screen3_bg.jpg) no-repeat center;
+	background-size: cover;
+	flex-direction: column;
+}
+
+.screen3 .img1 {
+	position: absolute;
+	top: 10%;
+	right: 20%;
+	width: 27.1354%;
+}
+
+.screen3 .img2 {
+	width: 67.5%;
+}
+
+.screen4 {
+	position: relative;
+	background: url(../img/screen4_bg.jpg) no-repeat center;
+	background-size: cover;
+	flex-direction: column;
+}
+
+.screen4 .img1 {
+	position: absolute;
+	top: 5%;
+	left: 20%;
+	width: 25.677%;
+}
+
+.screen4 .img2 {
+	width: 60%;
+}
+
+.screen5 {
+	position: relative;
+	background: url(../img/screen5_bg.jpg) no-repeat center;
+	background-size: cover;
+	flex-direction: column;
+}
+
+.screen5 .img1 {
+	position: absolute;
+	top: 5%;
+	right: 20%;
+	width: 33.90%;
+}
+
+.screen5 .img2 {
+	width: 62.76%;
+}
+
+.screen6 {
+	position: relative;
+	background: url(../img/screen6_bg.jpg) no-repeat center;
+	background-size: cover;
+	flex-direction: column;
+}
+
+.screen6 .img1 {
+	position: absolute;
+	top: 5%;
+	left: 20%;
+	width: 29.8958%;
+}
+
+.screen6 .img2 {
+	width: 67.0833333%;
+}
+.mousetip{
+	position: fixed;
+	display: flex;
+	justify-content: center;
+	z-index: 2;
+	bottom:25px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 32px;
+	height: 40px;
+	border-radius: 10px 10px 20px 20px;
+	border: 3px solid rgba(210,210,210,1);
+}
+.mousetip .point{
+	display: block;
+	width: 4px;
+	height: 10px;
+	background: #fff;
+	border-radius: 2px;
+	animation: move 1.5s ease-in-out infinite alternate;
+
+}
+.tiptext{
+	position: fixed;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 2;
+	bottom:2px;
+	color:#fff;
+}
+@keyframes move{
+	0% {
+		transform: translateY(3px);
+	}
+	100%{
+		transform: translateY(18px);
+		animation-timing-function: ease-in;
+	}
+}
