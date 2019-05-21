@@ -446,22 +446,22 @@
 				bandEvent: function () {
 					$("#zzlxToggle").on('click', { data: zzlx, name: 'zzlx' }, this.toggleView);
 					$("#effDateToggle").on('click', { data: effDate, name: 'effDate' }, this.toggleView);
-					$("#provinceToggle").on('click', { data: province, name: 'province' }, this.toggleView);
-					$("#cityToggle").on('click', { data: city, name: 'city' }, this.toggleView);
+					$("#provinceToggle").on('click', { data: province, name: 'province', arg: 'sheng_id' }, this.toggleView);
+					$("#cityToggle").on('click', { data: city, name: 'city', arg: 'city_id' }, this.toggleView);
 					$("#zzlx,#effDate,#province,#city").on('click', '.j-market-search-r-item__label', function (e) {
 						$(this).addClass('market-search-r-item__label--active').siblings().removeClass('market-search-r-item__label--active')
 					})
 				},
 				toggleView: function (e) {
-					var self = $(this), text = self.text(), data = e.data.data, name = e.data.name, _html;
+					var self = $(this), text = self.text(), data = e.data.data, name = e.data.name, _html, arg = e.data.arg;
 					$(this).toggleClass('open');
 					if (text == '展开') {
 						self.text('收起')
-						_html = template('marketSearchTlp', { list: data });
+						_html = template('marketSearchTlp', { list: data, arg: arg });
 						$("#" + name).html(_html);
 					} else {
 						self.text('展开');
-						_html = template('marketSearchTlp', { list: data.slice(0, 5) });
+						_html = template('marketSearchTlp', { list: data.slice(0, 5), arg: arg });
 						$("#" + name).html(_html);
 					}
 				}
