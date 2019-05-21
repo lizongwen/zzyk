@@ -23,6 +23,8 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	overflow: hidden;
+	min-height: 700px
 }
 
 .screen1 {
@@ -89,12 +91,13 @@
 
 .screen4 .img1 {
 	position: absolute;
-	top: 5%;
+	top: 9%;
 	left: 20%;
 	width: 25.677%;
 }
 
 .screen4 .img2 {
+	margin-top: 5%;
 	width: 60%;
 }
 
@@ -125,7 +128,7 @@
 
 .screen6 .img1 {
 	position: absolute;
-	top: 5%;
+	top: 9%;
 	left: 20%;
 	width: 29.8958%;
 }
@@ -144,14 +147,14 @@
 	width: 32px;
 	height: 40px;
 	border-radius: 10px 10px 20px 20px;
-	border: 3px solid rgba(210,210,210,1);
+	border: 2px solid #fff;
 }
 .mousetip .point{
 	display: block;
 	width: 4px;
 	height: 10px;
 	background: #fff;
-	border-radius: 2px;
+	border-radius: 1px;
 	animation: move 1.5s ease-in-out infinite alternate;
 
 }
@@ -160,12 +163,12 @@
 	left: 50%;
 	transform: translateX(-50%);
 	z-index: 2;
-	bottom:2px;
+	bottom:4px;
 	color:#fff;
 }
 @keyframes move{
 	0% {
-		transform: translateY(3px);
+		transform: translateY(8px);
 	}
 	100%{
 		transform: translateY(18px);

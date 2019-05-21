@@ -14,11 +14,12 @@
 
 <body>
 	<div id="app">
-		<img class="logo" src="../img/logo2.png">
-		<a class="mousetip" href="javascript:;">
-			<span class="point"></span>
+		<img class="logo" src="../img/logo2.png" id="logo">
+		<img class="logo" src="../img/logo.png" style="display: none">
+		<a class="mousetip" href="javascript:;" id="mousetip">
+			<span class="point" id="point"></span>
 		</a>
-		<a class="tiptext" href="javascript:;">滚动鼠标，了解更多资质服务内容</a>
+		<a class="tiptext" href="javascript:;" id="tiptext">滚动鼠标，了解更多资质服务内容</a>
 		<div class="swiper-container">
 			<div class="swiper-wrapper">
 				<div class="swiper-slide screen1">
@@ -132,6 +133,51 @@
 						// },
 						mousewheel: true,
 						slidesPerView: 1,
+						on: {
+							slideChange: function (index) {
+								console.log(swiper.activeIndex);
+								switch (swiper.activeIndex) {
+									case 0:
+										$("#mousetip").css('borderColor', '#fff')
+										$("#logo").attr('src', '../img/logo2.png')
+										$("#point").css('backgroundColor','#fff')
+										$("#tiptext").css('color','#fff')
+										break;
+									case 1:
+										$("#mousetip").css('borderColor', '#6e8bc1')
+										$("#logo").attr('src', '../img/logo.png')
+										$("#point").css('backgroundColor','#6e8bc1')
+										$("#tiptext").css('color','#6e8bc1')
+										break;
+									case 2:
+										$("#mousetip").css('borderColor', '#fff')
+										$("#logo").attr('src', '../img/logo2.png')
+										$("#point").css('backgroundColor','#fff')
+										$("#tiptext").css('color','#fff')
+										break;
+									case 3:
+										$("#mousetip").css('borderColor', '#6e8bc1')
+										$("#logo").attr('src', '../img/logo.png')
+										$("#point").css('backgroundColor','#6e8bc1')
+										$("#tiptext").css('color','#6e8bc1')
+										break;
+									case 4:
+										$("#mousetip").css('borderColor', '#fff')
+										$("#logo").attr('src', '../img/logo2.png')
+										$("#point").css('backgroundColor','#fff')
+										$("#tiptext").css('color','#fff')
+										break;
+									case 5:
+										$("#mousetip").css('borderColor', '#6e8bc1')
+										$("#logo").attr('src', '../img/logo.png')
+										$("#point").css('backgroundColor','#6e8bc1')
+										$("#tiptext").css('color','#6e8bc1')
+										break;
+									default:
+										break;
+								}
+							},
+						},
 					});
 				}
 			}
