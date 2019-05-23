@@ -25,7 +25,13 @@
 	align-items: center;
 	overflow: hidden;
 }
-
+.swiper-pagination-bullet{
+	width: 10px;
+	height: 10px;
+}
+.swiper-pagination-bullet-active{
+	background-color: rgba(0,0,0,.5);
+}
 .screen0 {
 	align-items: flex-start;
 	flex-direction: column;
@@ -43,20 +49,20 @@
 
 .screen1 .img1 {
 	margin-top: 10px;
-	width: 39%;
+	width: 31.2%;
 	transform: translateX(-1000px);
 	transition: transform 1s;
 }
 
 .screen1 .img2 {
-	margin: 4vh 0;
-	width: 38%;
+	margin: 6vh 0;
+	width: 30.4%;
 	transform: translateY(-1000px);
 	transition: transform 1s;
 }
 
 .screen1 .img3 {
-	width: 44.95%;
+	width: 40%;
 	transform: translateX(1000px);
 	transition: transform 1s;
 }
@@ -80,13 +86,13 @@
 
 .screen2 .img1 {
 	margin-left: 20%;
-	width: 34.01%;
+	width: 25%;
 	transform: translateX(-1000px);
 	transition: transform 1s;
 }
 
 .screen2 .img2 {
-	width: 66.09%;
+	width: 50%;
 	margin: 0 auto;
 	transform: translateX(1000px);
 	transition: transform 1s;
@@ -103,13 +109,13 @@
 	position: absolute;
 	top: 10%;
 	right: 20%;
-	width: 27.1354%;
+	width: 20%;
 	transform: translateX(1000px);
 	transition: transform 1s;
 }
 
 .screen3 .img2 {
-	width: 67.5%;
+	width: 50%;
 	transform: translateX(-1000px);
 	transition: transform 1s;
 }
@@ -123,16 +129,16 @@
 
 .screen4 .img1 {
 	position: absolute;
-	top: 9%;
+	top: 15%;
 	left: 20%;
-	width: 25.677%;
+	width: 20%;
 	transform: translateX(-1000px);
 	transition: transform 1s;
 }
 
 .screen4 .img2 {
 	margin-top: 5%;
-	width: 60%;
+	width: 45%;
 	transform: translateX(1000px);
 	transition: transform 1s;
 }
@@ -146,15 +152,15 @@
 
 .screen5 .img1 {
 	position: absolute;
-	top: 5%;
+	top: 10%;
 	right: 20%;
-	width: 33.90%;
+	width: 22%;
 	transform: translateX(1000px);
 	transition: transform 1s;
 }
 
 .screen5 .img2 {
-	width: 62.76%;
+	width: 45%;
 	transform: translateX(-1000px);
 	transition: transform 1s;
 }
@@ -168,15 +174,16 @@
 
 .screen6 .img1 {
 	position: absolute;
-	top: 9%;
+	top: 15%;
 	left: 20%;
-	width: 29.8958%;
+	width: 20%;
 	transform: translateX(-1000px);
 	transition: transform 1s;
 }
 
 .screen6 .img2 {
-	width: 67.0833333%;
+	width: 50%;
+	margin-top: 100px;
 	transform: translateX(1000px);
 	transition: transform 1s;
 }
